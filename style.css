@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+:root {
+    --bg-colour: rgb(255, 242, 225);
+    --bg-colour-darkmode: #1c2127; 
+    --bg-colour-dim: rgba(26, 26, 33, 0.483);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-colour-darkmode);
+}
+
+.nav_links a,
+.cta,
+.overlay_content a {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    user-select: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: var(--bg-colour-darkmode);
+}
+
+.logo {
+    cursor: pointer;
+    user-select: none;
+}
+
+.logo:hover {
+    content: url("images/star white.svg");
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+}
+
+.nav_links li {
+    padding: 0px 30px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #ffabff;
+}
+
+.cta {
+    transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+    color: #ffabff;
+}
+
+.maincontent {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  animation: fade-in 1.5s forwards;
+  opacity: 0;
+}
+
+
+/* MOBILE VIEW */
+
+.menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.2s ease 0s;
+  }
+  
+  .ActiveOverlay {
+    width: 100%;
+  }
+  
+  .overlay_content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 20px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #ffabff;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 30px;
+    color: #edf0f1;
+    user-select: none;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 30px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 520px) {
+    .nav_links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+  
+}
