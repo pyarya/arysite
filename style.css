@@ -6,6 +6,10 @@
     --bg-colour-dim: rgba(26, 26, 33, 0.483);
 }
 
+::selection {
+  background-color: #ffabff;
+  color: #ffffff;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -78,6 +82,14 @@ header {
   font-size: 21px;
 }
 
+.text-container {
+  display: flex
+}
+.text-column {
+  text-align: left;
+  font-size: 12px;
+  white-space: pre;
+}
 
 /* MOBILE VIEW */
 
@@ -147,12 +159,26 @@ header {
   }
   
   @media only screen and (max-width: 580px) {
+
     .nav_links,
     .cta {
       display: none;
+      scale: 70%;
     }
     .menu {
       display: initial;
+      scale: 80%;
+    }
+    .text-container pre,
+    .text-column {
+      scale: 70%;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .text-container {
+      display: inline;
+      text-align: center;
     }
   }
 
