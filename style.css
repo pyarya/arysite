@@ -92,11 +92,12 @@ header {
 }
 
 .text-container pre {
-  font-size: 10px; 
+  font-size: 11px; 
   user-select: none; 
-  display: flex;
-  max-height: 860px;
-  background-color: rgba(255,255,255,0);
+  display:inline-block;
+  max-height: 870px;
+  background-color: transparent;
+  width: fit-content;
 }
 
 .text-column {
@@ -195,8 +196,10 @@ header {
   @media only screen and (max-width: 750px) {
     .text-container {
       display: inline;
-      text-align: center;
     }
+    .text-container pre {
+      scale: 80%
+    };
   }
 
 @keyframes fade-in {
