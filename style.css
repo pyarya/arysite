@@ -175,7 +175,9 @@ header {
   }
 
   @media only screen and (max-width: 580px) {
-
+    body {
+      overflow-x: hidden;
+    }
     .nav_links,
     .cta {
       display: none;
