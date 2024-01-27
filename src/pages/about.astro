@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const PageTitle = "contact";
+
+var year = new Date().getFullYear();
+const month = new Date().getMonth();
+
+let uniyear;
+
+if (month >= 8) {
+  year++;
+}
+
+switch (year) {
+  case 2023:
+    uniyear = "in my first " + "year of";
+    break;
+  case 2024:
+    uniyear = "in my second " + "year of";
+    break;
+  case 2025:
+    uniyear = "in my third " + "year of";
+    break;
+  case 2026:
+    uniyear = "in my fourth " + "year of";
+    break;
+  default:
+    uniyear = "graduated " + "from";
+    break;
+
+}
+---
+
+<BaseLayout PageTitle = {PageTitle} uniyear = {uniyear}>
+		<pre>
+                                          :====:                                          
+                                        -%@@@@@@%-                                        
+                                       :@@@@@@@@@@-                                       
+                            ..         =@@@@@@@@@@+         ...                           
+                        .*@@@@@%=       %@@@@@@@@%.      =%@@@@@*.                        
+                       :@@@@@@@@@%       =#@@@@#=       %@@@@@@@@@-                       
+                       *@@@@@@@@@@=         @@.        -@@@@@@@@@@#                       
+                       -@@@@@@@@@@.         @@.        .@@@@@@@@@@=                       
+                        -%@@@@@@@%:         @@.        :%@@@@@@@%=                        
+                          .---: :#@#:       @@.      :#@#: :---.                          
+                                  :#@#:     @@.    :#@#:                                  
+                                    :#@#:   @@.  :#@#:                                    
+                  =#@@@@#=            :#@#: @@.:#@#:            =#@@@@#=                  
+                 %@@@@@@@@%.            :#@%@@%@#:             %@@@@@@@@%                 
+                -@@@@@@@@@@%%%%%%%%%%%%%%%@@@@@@%%%%%%%%%%%%%%%@@@@@@@@@@=                
+                :@@@@@@@@@@=-------------+@@@@@@+-------------=@@@@@@@@@@-                
+                 -%@@@@@@@=            :#@#-@@-#@#:            -%@@@@@@%-                 
+                   :=++=:            :#@#:  @@. .#@%:            :=++=:                   
+                                   :#@#:    @@.   :#@#-                                   
+                                 :#@#:      @@.     :#@#-                                 
+                         -*%@%%*%@#:        @@.       .#@%+#%@%*=                         
+                       .%@@@@@@@@%          @@.         #@@@@@@@@%.                       
+                       *@@@@@@@@@@-         @@.        :@@@@@@@@@@*                       
+                       +@@@@@@@@@@:       :=@@+-       .@@@@@@@@@@+                       
+                        *@@@@@@@@-      =@@@@@@@@=      -%@@@@@@@*                        
+                         .-+**+-       :@@@@@@@@@@-       :+**+=.                         
+                                       =@@@@@@@@@@+                                       
+                                        #@@@@@@@@%                                        
+                                         -#%@@@#-       
+    </pre>
+    <p>					
+      hi! i'm aryan. i'm currently {uniyear} electrical engineering at the university of alberta. i can be contacted through any of the contact links across the website.
+      The best way to reach me is probably through my university <a href="mailto:aryal2@ualberta.ca" style="text-decoration: none; font-weight: bolder; color: #ffabff;">email</a>.
+    
+      the code for this website is hosted on
+      my <a href="https://github.com/pyarya/website" style="text-decoration: none; font-weight: bolder; color: #ffabff;">github!</a> feel free to take any elements from 
+      this website and apply it to your own!
+    </p>
+</BaseLayout>

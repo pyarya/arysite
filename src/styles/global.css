@@ -1,0 +1,141 @@
+:root {
+  --bg-colour-light: rgb(255, 242, 225);
+  --bg-colour: #1c2127;
+  --bg-colour-shade: #2c3137;
+  --highlight: #ffabff;
+}
+
+::selection {
+background-color: var(--highlight);
+color: #ffffff;
+}
+
+html {
+    background-color: var(--bg-colour);
+    font-family: serif;
+    
+  }
+  
+  body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100ch;
+    padding: 1rem;
+    line-height: 1.15;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  footer {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+  }
+
+  footer a:hover, 
+  footer a:focus {
+    color: var(--highlight);
+  }
+
+/* nav styles */
+
+.burgermenu {
+  cursor: pointer;
+  padding-right: 20px;
+  padding-top: 12px;
+  float: right;
+}
+
+.burgermenu .line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+
+.nav-parent {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.nav-links, .alt-links{
+  width: 100%;
+  top: 5rem;
+  left: 4px;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a, .alt-links a{
+  display: inline;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+
+.nav-parent .logo {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #ffffff;
+  align-self: center;
+}
+
+.nav-links a:hover,
+.nav-links a:focus,
+.alt-links a:hover,
+.alt-links a:focus,
+.nav-parent .logo:hover,
+.nav-parent .logo:focus{
+  text-decoration:overline;
+  color: var(--highlight);
+}
+
+.resume:hover {
+  font-weight: bold;
+  margin: -0.1rem;
+}
+
+.expanded {
+  display: inline-block;
+  width: 8%;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links, .alt-links {
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a, .alt-links a{
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .burgermenu {
+    display: none;
+  }
+
+}

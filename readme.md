@@ -1,11 +1,1 @@
-This is my personal website in progress.
-
-I will update this if I feel like it
-
-Maybe I wont 
-
-Who knows
-
-Here is the [preview](https://pyarya.github.io/website)
-
-thanks github for free hosting!!!
+repo for my personal [website](https://www.pyarya.github.io), created with [Astro](https://www.astro.build).
