@@ -1,1 +1,1 @@
-repo for my personal [website](https://www.pyarya.github.io), created with [Astro](https://www.astro.build).
+repo for my personal [website](https://www.pyarya.pages.dev), created with [Astro](https://www.astro.build).
