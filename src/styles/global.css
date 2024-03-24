@@ -166,6 +166,7 @@ p.hi {
 
   .nav-parent {
     user-select: none;
+    align-items: center;
   }
 
   .nav-links, .alt-links {
