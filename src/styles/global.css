@@ -127,6 +127,11 @@ html {
   justify-content: space-evenly;
 }
 
+.text p{
+  margin-top: 30px;
+  justify-content: center;
+}
+
 @media screen and (min-width: 725px) {
 
   .nav-parent {
@@ -169,11 +174,7 @@ html {
   margin-top: -20px;
 }
 
-p {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-}
+
 
 .word {
   position: absolute;
