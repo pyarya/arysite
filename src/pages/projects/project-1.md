@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MDPostLayout.astro
-title: lorem ipsum
+title: Project A
 description: 'sample project post'
 author: aryan
 image:

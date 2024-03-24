@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const allProjects = await Astro.glob('../pages/projects/*.md');
 const PageTitle = "projects";
 ---
 
 <BaseLayout PageTitle = {PageTitle}>
         <p>Here are some of my projects:</p>
         <ul>
-            <li><a href="/projects/project-1">project A</a></li>
-            <li><a href="/projects/project-2">project B</a></li>
+            {allProjects.map((project) => <li><a href={project.url}>{project.frontmatter.title}</a></li>)}
         </ul>
     </body>
 </BaseLayout>
