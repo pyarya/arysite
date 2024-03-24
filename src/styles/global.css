@@ -139,6 +139,9 @@ html {
     display: none;
   }
 
+  .name {
+    font-weight: bolder;  }
+
 .text {
   position: absolute;
   width: 600px;
@@ -218,15 +221,15 @@ p {
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.wisteria {
+.lavender {
   color: #da8ffa;
 }
 
-.belize {
+.blue {
   color: #89caf5;
 }
 
-.pomegranate {
+.red {
   color: #fc7869;
 }
 
@@ -234,6 +237,6 @@ p {
   color: #6ee9b6;
 }
 
-.midnight {
+.yellow {
   color: #e0e1a0;
 }
