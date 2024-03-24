@@ -7,5 +7,5 @@ author: aryan
 image:
     url: '/public/post-1.png'
     alt: 'boooo'
-tags: ["tomato","secret"]
+tags: ["sean","test"]
 ---

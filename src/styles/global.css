@@ -1,13 +1,33 @@
 :root {
-  --bg-colour-light: rgb(255, 242, 225);
+  --bg-colour-light: rgb(255, 243, 225);
   --bg-colour: #1c2127;
   --bg-colour-shade: #2c3137;
   --highlight: #ffabff;
+  --purplight: #9636bf;
 }
 
 ::selection {
 background-color: var(--highlight);
 color: #ffffff;
+}
+
+html.light{
+  background-color: var(--bg-colour-light);
+  color: var(--bg-colour);
+}
+
+
+.light .nav-links a, 
+.light .alt-links a {
+  color: var(--bg-colour);
+}
+
+.light .nav-links a:hover,
+.light .nav-links a:focus,
+.light .alt-links a:hover,
+.light .alt-links a:focus{
+  text-decoration:overline;
+  color: var(--purplight);
 }
 
 
@@ -135,8 +155,6 @@ html {
 @media screen and (min-width: 725px) {
 
   .nav-parent {
-    display: flex;
-    justify-content: space-between;
     user-select: none;
   }
 
