@@ -66,13 +66,16 @@ html {
 
   h1 {
     margin: 1rem 0;
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   footer a, footer p {
     text-decoration: none;
     color: #ffffff;
     user-select: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
   }
 
   footer {
@@ -85,6 +88,11 @@ html {
   footer a:hover, 
   footer a:focus {
     color: var(--highlight);
+  }
+
+  footer p.kawaii {
+    font-size: 1rem;
+    margin: 0;
   }
 
 /* nav styles */
@@ -160,6 +168,7 @@ html {
 
 p.hi {
   margin-top: 30px;
+  font-size: larger;
 }
 
 @media screen and (min-width: 725px) {
@@ -236,16 +245,11 @@ p.hi {
 
 /*-------changing text on home-------*/
 
-p {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-}
 
 .word {
   position: absolute;
   opacity: 0;
-  font-size: larger;
+  font-size:x-large;
 }
 
 .letter {

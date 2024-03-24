@@ -1,7 +1,7 @@
 ---
 ---
 <button id="themeToggle">
-    <p>ദ്ദി ˉ͈̀꒳ˉ͈́ )✧</p>
+    <p class="kawaii">ദ്ദി ˉ͈̀꒳ˉ͈́ )✧</p>
   </button>
 
 <style>
@@ -12,6 +12,12 @@
 </style>
 
 <script is:inline>
+    const buttons = [
+    "ദ്ദി ˉ͈̀꒳ˉ͈́ )✧",
+    "⸜(*ˊᗜˋ*)⸝",
+  ];
+    let themeIndex = 0;
+
     const theme = (() => {
       if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
         return localStorage.getItem('theme');
@@ -36,7 +42,11 @@
   
       const isDark = element.classList.contains("light");
       localStorage.setItem("theme", isDark ? "light" : "dark");
+
+      themeIndex = (themeIndex + 1) % buttons.length;
+      document.querySelector('#themeToggle .kawaii').innerText = buttons[themeIndex];
     }
+
   
     document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
   </script>
