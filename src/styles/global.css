@@ -16,6 +16,15 @@ html.light{
   color: var(--bg-colour);
 }
 
+.light body {
+  background-color: var(--bg-colour-light);
+  color: var(--bg-colour);
+}
+
+.light footer p,
+.light footer a {
+  color: var(--bg-colour);
+}
 
 .light .nav-links a, 
 .light .alt-links a {
@@ -25,7 +34,9 @@ html.light{
 .light .nav-links a:hover,
 .light .nav-links a:focus,
 .light .alt-links a:hover,
-.light .alt-links a:focus{
+.light .alt-links a:focus
+.light footer a:hover,
+.light footer a:focus{
   text-decoration:overline;
   color: var(--purplight);
 }
@@ -58,7 +69,7 @@ html {
     font-size: 3.5rem;
   }
 
-  footer a {
+  footer a, footer p {
     text-decoration: none;
     color: #ffffff;
     user-select: none;
@@ -147,9 +158,8 @@ html {
   justify-content: space-evenly;
 }
 
-.text p{
+p.hi {
   margin-top: 30px;
-  justify-content: center;
 }
 
 @media screen and (min-width: 725px) {
