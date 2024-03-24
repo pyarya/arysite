@@ -33,7 +33,7 @@ html {
   
   h1 {
     margin: 1rem 0;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   footer a {
@@ -103,9 +103,7 @@ html {
 .nav-links a:hover,
 .nav-links a:focus,
 .alt-links a:hover,
-.alt-links a:focus,
-.nav-parent .logo:hover,
-.nav-parent .logo:focus{
+.alt-links a:focus{
   text-decoration:overline;
   color: var(--highlight);
 }
@@ -121,14 +119,17 @@ html {
   justify-content: space-evenly;
 }
 
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 700px) {
   .nav-links, .alt-links {
     display: block;
     position: static;
     width: auto;
     background: none;
   }
-
+  .middle {
+    display: flex;
+    padding: 15%
+  }
   .nav-links a, .alt-links a{
     display: inline-block;
     padding: 15px 20px;
@@ -138,18 +139,13 @@ html {
     display: none;
   }
 
-}
-
-/*-------changing text on home-------*/
-
-
 .text {
   position: absolute;
   width: 600px;
   left: 50%;
-  margin-left: -225px;
+  margin-left: -325px;
   height: 40px;
-  top: 50%;
+  top: 40%;
   margin-top: -20px;
 }
 
@@ -162,6 +158,43 @@ p {
 .word {
   position: absolute;
   opacity: 0;
+  font-size: larger;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+}
+
+/*-------changing text on home-------*/
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  opacity: 0;
+  font-size: larger;
 }
 
 .letter {
