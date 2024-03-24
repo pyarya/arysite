@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout PageTitle = {frontmatter.title}>
-    <img src="{frontmatter.image.url}" width = "200" alt="{frontmatter.image.alt}" />
+    <img class="mdpost" src={frontmatter.image.url} alt={frontmatter.image.alt} width="600"/>
     <p>{frontmatter.pubDate.slice(0,10)}</p>
     <p><em>{frontmatter.description}</em></p>
     <slot />
