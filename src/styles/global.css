@@ -475,11 +475,15 @@ p.hi {
   gap: 0.5rem; 
   border-radius: 0.375rem; 
   border: 2px solid #4a5568; 
-  padding: 3rem; 
+  padding: 1.5rem; 
   transition: all 0.3s ease; 
   margin: 1%;
   text-decoration: none;
   color: #fff;
+}
+
+.inside-post {
+  font-size: x-large;
 }
 
 .light .postlink {
@@ -490,7 +494,7 @@ p.hi {
   gap: 0.5rem; 
   border-radius: 0.375rem; 
   border: 2px solid #928c73; 
-  padding: 3rem; 
+  padding: 1.5rem; 
   transition: all 0.3s ease; 
   margin: 1%;
   text-decoration: none;
@@ -499,7 +503,7 @@ p.hi {
 
 
 .light .inside-post {
-  color: #8e5cb6; 
+  color: #000000; 
   
 }
 
