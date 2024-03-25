@@ -35,7 +35,7 @@ SUSBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/usr/bin/sudo -
 
 SUSBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="/usr/bin/sudo --user=ary /usr/local/bin/refresh1.sh disconnected"
 ```
-The first line executes a script called refresh1.sh with the argument ***connected*** when a power supply is detected online, we want to run this with elevated privelges as the user in the case of refresh rate, you might need to change the permissions for your use case.
+The first line executes a script called refresh1.sh with the argument ***connected*** when a power supply is detected online, we want to run this with elevated priveledges as the user in the case of refresh rate, you might need to change the permissions for your use case.
 
  The second line executes the same script with the argument ***disconnected*** when the power supply goes offline.
 
