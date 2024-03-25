@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 const { PageTitle } = Astro.props;
 import '../styles/global.css';
 import '@fontsource-variable/source-code-pro';
@@ -13,10 +14,11 @@ import Footer from '../components/Footer.astro';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{PageTitle}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Header />
-		<h1>{PageTitle}</h1>
+		<h1 transition:animate="slide">{PageTitle}</h1>
 		<slot />
 		<Footer /> 
 		<script>
