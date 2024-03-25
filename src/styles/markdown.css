@@ -206,6 +206,8 @@ h1.markdown-title {
     text-wrap: wrap;
     white-space: pre-wrap;
     font-size: large;
+    position: relative;
+    top: 0.5rem;
 }
 .prose pre > code[data-line-numbers] {
     counter-reset: line;
@@ -219,6 +221,7 @@ h1.markdown-title {
     text-align: left;
     color: #7ca2dfad;
 }
+
 .prose pre > code > .line::before {
     content: "";
     display: inline-block;
@@ -255,6 +258,7 @@ h1.markdown-title {
     word-break: break-all;
     text-wrap: wrap;
     white-space: pre-wrap;
+    color: #ffabff;
 }
 .prose pre > code[data-line-numbers] {
     counter-reset: line;
@@ -274,9 +278,6 @@ h1.markdown-title {
     width: 1rem;
     text-align: right;
 }
-
-
-
 
 /**** Other elements ****/
 .prose mark {

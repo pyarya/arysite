@@ -40,13 +40,45 @@ The first line executes a script called refresh1.sh with the argument ***connect
  The second line executes the same script with the argument ***disconnected*** when the power supply goes offline.
 
 ## Step 3: Write your script!
+Now we can write the script that will be run. In my case, I am calling a `swaymsg output eDP-1 mode 3072x1920@120.002Hz` inside of a case statement to change my refresh rate
+whenever my power supply is plugged in. When we were figuring this out, I was having an issue where the script was working for basic shell commands like writing ot a file but not executing bianries, this was because we were not caling the proper environment variables. You will need to find out what these are for different usecases.
 
+```bash
+#!/bin/bash
+
+# This script is called by the udev rule /etc/udev/onpower.rules
+
+export SWAYSOCK="/run/user/1000/$(/bin/ls /run/user/1000 | grep sway)"
+export DISPLAY=:0
+
+case $1 in 
+    "connected")
+    echo "connected :) @ $(date)" > /dev/shm/acstatus # write to a file letting us know if its connected for debugging.
+    /usr/bin/swaymsg output eDP-1 mode 3072x1920@120.002Hz &>> /dev/shm/acstatus
+    ;;
+    "disconnected")
+    echo "disconnected :( @ $(date)" > /dev/shm/acstatus # write to a file letting us know if its connected for debugging.
+    /usr/bin/swaymsg output eDP-1 mode 3072x1920@60.000Hz &>> /dev/shm/acstatus
+    ;;
+    *)
+    echo "unknown" > /dev/shm/acstatus
+    /usr/bin/swaymsg output eDP-1 mode 3072x1920@60.000Hz &>> /dev/shm/acstatus
+    ;;
+esac
+
+exit 0
+```
+
+With this script written, we can make it executable with `chmod 777 script.sh` or `chmod +x script.sh` and test it. If it works when running manually, we can test it using the udev rules. If not, we should go back and check for any errors in the script.
 
 ## Final Step: Reload the udev rules.
+We can now finish up by reloading the udev rules with:
 ```bash
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
+and finally plugging in the ac adapter!
 
+With this, you should have a functioning udev rule that runs a shell script on AC power.
 #### links
 1. [udev on ArchWiki](https://wiki.archlinux.org/title/udev)
 2. [superuser post](https://superuser.com/a/1426287)
