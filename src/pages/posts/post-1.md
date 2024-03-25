@@ -32,6 +32,7 @@ We want to create a file in the `/udev` directory called `onpower.rules`(or what
 For my example of running a script to control refresh rate I had the following lines in my `onpower.rules` file:
 ```
 SUSBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/usr/bin/sudo --user=ary /usr/local/bin/refresh1.sh connected"
+
 SUSBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="/usr/bin/sudo --user=ary /usr/local/bin/refresh1.sh disconnected"
 ```
 The first line executes a script called refresh1.sh with the argument ***connected*** when a power supply is detected online, we want to run this with elevated privelges as the user in the case of refresh rate, you might need to change the permissions for your use case.
