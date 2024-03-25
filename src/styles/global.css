@@ -95,6 +95,21 @@ html {
     margin: 0;
   }
 
+
+  #themeToggle:hover {
+    cursor: pointer;
+    animation: rotate180 0.5s ease-in-out 0.5s;
+  }
+
+  @keyframes rotate180 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
 /* nav styles */
 
 .burgermenu {
@@ -145,6 +160,18 @@ html {
   color: #ffffff;
   align-self: center;
   user-select: none;
+}
+
+.light .logo {
+  filter: hue-rotate(340deg);
+}
+
+.light .logo:hover {
+  filter: hue-rotate(0deg);
+}
+
+.logo:hover{
+  filter: hue-rotate(340deg);
 }
 
 .nav-links a:hover,
