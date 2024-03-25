@@ -1,0 +1,286 @@
+/*
+ *                          >>>> Markdown Styles <<<<
+ *
+ * This stylesheet is meant for the blog and unix notes, and can be generally
+ * used for anything getting rendered largely from markdown.
+ *
+ * The parent div where the markdown gets inserted must have class "prose".
+ *
+ *
+ */
+
+/**** Outer body (not part of the markdown) ****/
+@media not (max-width: 899px) {
+    main {
+        max-width: 900px;
+        margin: auto;
+    }
+}
+@media (max-width: 899px) {
+    main {
+        margin: 30px;
+    }
+}
+div.markdown-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1.markdown-title {
+    font-family: var(--font-title);
+    font-size: 40px;
+}
+.hero-image {
+    width: 100%;
+}
+.hero-image img {
+    display: block;
+    margin: 30px auto;
+    border-radius: 22px;
+    filter: drop-shadow(0 4px 6px #000);
+}
+
+/**** Headings ****/
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+    margin: calc(var(--font-size) / 3) 0;
+    font-family: var(--font-title);
+    text-align: left;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+.prose h1 a,
+.prose h2 a,
+.prose h3 a,
+.prose h4 a,
+.prose h5 a,
+.prose h6 a {
+    width: 16px;
+    height: 64px;
+    position: absolute;
+    float: left;
+    margin-top: -2px;
+    margin-left: -20px;
+    visibility: hidden;
+}
+.prose h1:hover a svg.icon-link,
+.prose h2:hover a svg.icon-link,
+.prose h3:hover a svg.icon-link,
+.prose h4:hover a svg.icon-link,
+.prose h5:hover a svg.icon-link,
+.prose h6:hover a svg.icon-link {
+    visibility: visible;
+}
+.prose h1 a svg.icon-link,
+.prose h2 a svg.icon-link,
+.prose h3 a svg.icon-link,
+.prose h4 a svg.icon-link,
+.prose h5 a svg.icon-link,
+.prose h6 a svg.icon-link {
+    display: inline-block;
+}
+.prose h1 {
+    font-size: 40px;
+    margin-bottom: calc(var(--font-size) / 3);
+}
+.prose h1:after { /* Psuedo-element prevents extending to padding */
+    content: "";
+    display: block;
+    border-bottom: 2px solid #000;
+}
+.prose h2 {
+    font-size: 30px;
+}
+.prose h2:after { /* Psuedo-element prevents extending to padding */
+    content: "";
+    display: block;
+    border-bottom: 1px solid #aaa;
+}
+.prose h3 {
+    font-size: 26px;
+}
+.prose h4 {
+    font-size: 22px;
+}
+.prose h5 {
+    font-size: 20px;
+}
+.prose h6 {
+    color: #888;
+    font-size: 18px;
+}
+
+/**** Paragraphs ****/
+.prose p {
+    line-height: 1.5;
+    font-family: var(--font-sans);
+    margin: 16px 0;
+}
+
+/**** URLs ****/
+.prose a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+.prose a:hover {
+    text-decoration: underline;
+}
+
+/**** Lists ****/
+.prose ul {
+    padding-left: 30px;
+}
+.prose ul li {
+    list-style-type: disc;
+}
+.prose ol {
+    padding-left: 30px;
+}
+.prose ol li {
+    list-style-type: decimal;
+}
+
+/**** Images ****/
+.prose img {
+    display: block;
+    margin: 30px auto;
+    border-radius: 22px;
+    filter: drop-shadow(0 4px 6px #444);
+}
+
+/**** Tables ****/
+.prose table {
+    border-radius: 20px;
+    margin: calc(var(--font-size) / 3) 0;
+}
+.prose table th {
+    text-align: center;
+}
+.prose table thead {
+    border-bottom: 2px solid black;
+}
+.prose table th, .prose table td {
+    padding: 6px 14px;
+    margin: 1px;
+    border: 1px solid black;
+}
+
+/**** Block quotes ****/
+.prose blockquote {
+    margin-left: 3px; /* Needs to be equal to border-left width */
+    padding-left: 15px;
+    border-left: 3px solid black;
+}
+
+/**** Code block dark mode ****/
+.prose code:not(pre > code) {
+    background-color: #f6f6f6;
+    color: #000;
+    /*border-radius: 6px;*/
+    border-radius: 6px;
+    /*padding: 16px;*/
+    padding: 2px 4px;
+    margin: 16px 0;
+    font-family: var(--font-mono);
+    /*filter: drop-shadow(0 2px 6px #ddd);*/
+}
+.prose pre {
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    text-wrap: wrap;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 32px 0;
+    font-family: var(--font-mono);
+    filter: drop-shadow(0 2px 6px #ddd);
+}
+.prose pre code {
+    overflow: hidden;
+    width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    text-wrap: wrap;
+    white-space: pre-wrap;
+    font-size: large;
+}
+.prose pre > code[data-line-numbers] {
+    counter-reset: line;
+}
+.prose pre > code[data-line-numbers] > .line::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    margin-right: 2rem;
+    width: 1rem;
+    text-align: left;
+    color: #7ca2dfad;
+}
+.prose pre > code > .line::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    text-align: right;
+}
+
+/* CODE BLOCKS LIGHT MODE */
+.prose code:not(pre > code) {
+    background-color: #f6f6f6;
+    /*border-radius: 6px;*/
+    border-radius: 6px;
+    /*padding: 16px;*/
+    padding: 2px 4px;
+    margin: 16px 0;
+    font-family: var(--font-mono);
+    /*filter: drop-shadow(0 2px 6px #ddd);*/
+}
+.prose pre {
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    text-wrap: wrap;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 32px 0;
+    font-family: var(--font-mono);
+    filter: drop-shadow(0 2px 6px #ddd);
+}
+.prose pre code {
+    overflow: hidden;
+    width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    text-wrap: wrap;
+    white-space: pre-wrap;
+}
+.prose pre > code[data-line-numbers] {
+    counter-reset: line;
+}
+.prose pre > code[data-line-numbers] > .line::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    margin-right: 2rem;
+    width: 1rem;
+    text-align: left;
+    color: #7ca2dfad;
+}
+.prose pre > code > .line::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    text-align: right;
+}
+
+
+
+
+/**** Other elements ****/
+.prose mark {
+    background-color: white;
+    font-style: italic;
+    color: var(--accent-color);
+}
