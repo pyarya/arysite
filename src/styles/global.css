@@ -45,6 +45,7 @@ html.light{
 html {
     background-color: var(--bg-colour);
     font-family: serif;
+    transition: background-color 0.3s ease;
   }
   
   body {
@@ -79,6 +80,10 @@ html {
   }
 
   footer {
+    margin-top: auto;
+  }
+
+  footer .footlinks {
     display: flex;
     margin-top: auto;
     justify-content: space-between;
@@ -95,10 +100,9 @@ html {
     margin: 0;
   }
 
-
   #themeToggle:hover {
     cursor: pointer;
-    animation: rotate180 0.5s ease-in-out 0.5s;
+    animation: rotate180 1s ease-in-out 0.5s;
   }
 
   @keyframes rotate180 {
@@ -111,22 +115,6 @@ html {
   }
 
 /* nav styles */
-
-.burgermenu {
-  cursor: pointer;
-  padding-right: 20px;
-  padding-top: 12px;
-  float: right;
-}
-
-.burgermenu .line {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin-top: 5px;
-  background-color: #ffffff;
-  border-radius: 1.5rem;
-}
 
 .nav-parent {
   display: flex;
@@ -143,7 +131,6 @@ html {
   margin: 0;
   user-select: none;
 }
-
 
 .nav-links a, .alt-links a{
   display: inline;
@@ -224,6 +211,121 @@ p.hi {
 
   .hamburger-menu {
     display: none;
+  }
+
+  /* hamburger menu from https://codepen.io/andreykrokhin/pen/mGEqja */
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(-45deg);
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(-90deg);
+  }
+
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0; /* Changed from left: 0; */
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 50px;
+    right: 20px; /* Changed from left: 20px; */
+
+    width: 26px;
+    height: 26px;
+
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+
+    transition-duration: .25s;
+  }
+
+  .light .menu__btn > span,
+  .light .menu__btn > span::before,
+  .light .menu__btn > span::after {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--bg-colour);
+
+    transition-duration: .25s;
+  }
+
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -300px; /* Changed from left: -100%; */
+
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+
+    margin: 0;
+    padding: 80px 0;
+
+    list-style: none;
+
+    background-color: var(--bg-colour-shade);
+    box-shadow: -1px 0px 6px rgba(0, 0, 0, .2); /* Changed shadow direction */
+
+    transition-duration: .25s;
+  }
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition-duration: .25s;
+  }
+
+  .menu__item:hover {
+    background-color: #cc95cc;
   }
 
   .name {
@@ -379,120 +481,7 @@ p.hi {
   text-decoration: none;
 }
 
-/* hamburger menu from https://codepen.io/andreykrokhin/pen/mGEqja */
-#menu__toggle {
-  opacity: 0;
-}
 
-#menu__toggle:checked ~ .menu__btn > span {
-  transform: rotate(-45deg);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  transform: rotate(-90deg);
-}
-
-#menu__toggle:checked ~ .menu__box {
-  visibility: visible;
-  right: 0; /* Changed from left: 0; */
-}
-
-.menu__btn {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 50px;
-  right: 20px; /* Changed from left: 20px; */
-
-  width: 26px;
-  height: 26px;
-
-  cursor: pointer;
-  z-index: 2;
-}
-
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  display: block;
-  position: absolute;
-
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-
-  transition-duration: .25s;
-}
-
-.light .menu__btn > span,
-.light .menu__btn > span::before,
-.light .menu__btn > span::after {
-  display: block;
-  position: absolute;
-
-  width: 100%;
-  height: 2px;
-
-  background-color: var(--bg-colour);
-
-  transition-duration: .25s;
-}
-
-.menu__btn > span::before {
-  content: '';
-  top: -8px;
-}
-
-.menu__btn > span::after {
-  content: '';
-  top: 8px;
-}
-
-.menu__box {
-  display: block;
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  right: -300px; /* Changed from left: -100%; */
-
-  width: 300px;
-  height: 100%;
-  z-index: 1;
-
-  margin: 0;
-  padding: 80px 0;
-
-  list-style: none;
-
-  background-color: var(--bg-colour-shade);
-  box-shadow: -1px 0px 6px rgba(0, 0, 0, .2); /* Changed shadow direction */
-
-  transition-duration: .25s;
-}
-
-.menu__item {
-  display: block;
-  padding: 12px 24px;
-
-  color: #ffffff;
-
-  font-size: 20px;
-  font-weight: 600;
-
-  text-decoration: none;
-
-  transition-duration: .25s;
-}
-
-.menu__item:hover {
-  background-color: #cc95cc;
-}
 
 .postlink {
   display: flex;
