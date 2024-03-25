@@ -11,7 +11,6 @@ background-color: var(--highlight);
 color: #ffffff;
 }
 
-
 html.light{
   background-color: var(--bg-colour-light);
   color: var(--bg-colour);
@@ -495,7 +494,7 @@ p.hi {
   transition: all 0.3s ease; 
   margin: 1%;
   text-decoration: none;
-  color: #fff;
+  color: #ffabff;
 }
 
 
