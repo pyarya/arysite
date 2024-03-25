@@ -196,7 +196,7 @@ h1.markdown-title {
     padding: 16px;
     margin: 32px 0;
     font-family: var(--font-mono);
-    filter: drop-shadow(0 2px 6px #ddd);
+    filter: drop-shadow(0 2px 4px #dddddd8a);
 }
 .prose pre code {
     overflow: hidden;
@@ -230,7 +230,7 @@ h1.markdown-title {
 }
 
 /* CODE BLOCKS LIGHT MODE */
-.prose code:not(pre > code) {
+.light .prose code:not(pre > code) {
     background-color: #f6f6f6;
     /*border-radius: 6px;*/
     border-radius: 6px;
@@ -238,20 +238,20 @@ h1.markdown-title {
     padding: 2px 4px;
     margin: 16px 0;
     font-family: var(--font-mono);
-    /*filter: drop-shadow(0 2px 6px #ddd);*/
+    filter: drop-shadow(0 2px 6px #0000005e);
 }
-.prose pre {
+.light .prose pre {
     overflow-wrap: anywhere;
     word-break: break-all;
     text-wrap: wrap;
-    background-color: #f6f6f6;
+    background-color: #ffffff;
     border-radius: 6px;
     padding: 16px;
     margin: 32px 0;
     font-family: var(--font-mono);
-    filter: drop-shadow(0 2px 6px #ddd);
+    filter: drop-shadow(0 2px 6px #000000b9);
 }
-.prose pre code {
+.light .prose pre code {
     overflow: hidden;
     width: 100%;
     overflow-wrap: anywhere;
@@ -260,10 +260,10 @@ h1.markdown-title {
     white-space: pre-wrap;
     color: #ffabff;
 }
-.prose pre > code[data-line-numbers] {
+.light .prose pre > code[data-line-numbers] {
     counter-reset: line;
 }
-.prose pre > code[data-line-numbers] > .line::before {
+.light .prose pre > code[data-line-numbers] > .line::before {
     counter-increment: line;
     content: counter(line);
     display: inline-block;
@@ -272,7 +272,7 @@ h1.markdown-title {
     text-align: left;
     color: #7ca2dfad;
 }
-.prose pre > code > .line::before {
+.light .prose pre > code > .line::before {
     content: "";
     display: inline-block;
     width: 1rem;
