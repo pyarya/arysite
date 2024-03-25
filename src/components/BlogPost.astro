@@ -1,9 +1,9 @@
 ---
 const { title, url, frontmatter } = Astro.props;
-
+import { slide } from 'astro:transitions';
 ---
 <li>
-    <a class="postlink" href={url}>
+    <a transition:animate={slide({ duration: '0.4s' })} class="postlink" href={url}>
         <container class="inside-post">{title}</container>
     </a>
 </li>

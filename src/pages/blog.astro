@@ -6,7 +6,7 @@ const PageTitle = "blog";
 ---
 
 <BaseLayout PageTitle = {PageTitle}>
-        <p>Here are some of my thoughts, notes, or snippets:</p>
+        <p transition:animate="fade">Here are some of my thoughts, notes, or snippets:</p>
         {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
     </body>
 </BaseLayout>
