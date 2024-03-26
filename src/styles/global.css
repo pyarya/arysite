@@ -12,6 +12,8 @@ background-color: var(--highlight);
 color: #ffffff;
 }
 
+
+
 html.light{
   background-color: var(--bg-colour-light);
   color: var(--bg-colour);
@@ -151,6 +153,11 @@ html {
   color: #ffffff;
   position: relative;
   user-select: none;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .nav-parent .logo {
@@ -179,6 +186,11 @@ html {
 .alt-links a:focus{
   text-decoration:overline;
   color: var(--highlight);
+  animation: bounce 0.5s;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 .resume:hover {

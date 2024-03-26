@@ -84,12 +84,12 @@ h1.markdown-title {
 }
 .prose h1 {
     font-size: 40px;
-    margin-bottom: calc(var(--font-size) / 3);
+    /* margin-bottom: calc(var(--font-size) / 3); */
 }
 .prose h1:after { /* Psuedo-element prevents extending to padding */
     content: "";
     display: block;
-    border-bottom: 2px solid #000;
+    /* border-bottom: 2px solid #000; */
 }
 .prose h2 {
     font-size: 30px;
@@ -97,7 +97,7 @@ h1.markdown-title {
 .prose h2:after { /* Psuedo-element prevents extending to padding */
     content: "";
     display: block;
-    border-bottom: 1px solid #aaa;
+    /* border-bottom: 1px solid #aaa; */
 }
 .prose h3 {
     font-size: 26px;
