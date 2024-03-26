@@ -80,7 +80,7 @@ html {
   }
 
   h1 {
-    margin: 1rem 0;
+    margin: 0 0;
     font-size: 4rem;
   }
 
@@ -114,19 +114,6 @@ html {
     margin: 0;
   }
 
-  #themeToggle:hover {
-    cursor: pointer;
-    animation: rotate180 1s ease-in-out 0.5s;
-  }
-
-  @keyframes rotate180 {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
 
 /* nav styles */
 
@@ -205,7 +192,8 @@ html {
 }
 
 p.hi {
-  margin-top: 30px;
+  margin-top: 20%;
+  margin-bottom: 0px;
   font-size: larger;
 }
 
@@ -399,10 +387,6 @@ p.hi {
   .name {
     font-weight: bolder;  }
 
-  p.hi {
-    margin-top: -2rem;
-    font-size: larger;
-  }
 
   .postlink {
     display: flex;
