@@ -8,7 +8,12 @@ const PageTitle = "blog";
 <BaseLayout PageTitle = {PageTitle}>
         <p transition:animate="fade">Here are some of my thoughts, notes, or snippets:</p>
         <div class="projects-container">
-        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} />)}
+        {allPosts.map((post) => (
+            <BlogPost
+                url={post.url} 
+                title={post.frontmatter.title} 
+                description={post.frontmatter.description} 
+                date={post.frontmatter.pubDate.slice(0,10)} />))}
         </div>
     </body>
 </BaseLayout>
