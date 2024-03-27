@@ -1,10 +1,9 @@
 ---
-layout: ../../layouts/MDPostLayout.astro
 title: udev rules!
 description: Run-through on how to make things happen using udev rules and bash scripts.
 author: aryan
 image:
-  url: 
+  url: ""
   alt: ""
 pubDate: 2024-03-24
 tags:
