@@ -1,16 +1,31 @@
 ---
 import Social from './Social.astro';
 import ThemeIcon from './ThemeIcon.astro';
+
+const today = new Date();
 ---
 
 <footer>
-    <center style="opacity: 60%; margin:2%; font-size: small;">© 2024 Aryan Aryal. Licensed under AGPL.</center>
+    <center style="opacity: 60%; margin:2%; font-size: small;">© {today.getFullYear()} Aryan Aryal. Licensed under AGPL.</center>
     <div class="footlinks">
-    <p>
-    <!-- <Social platform = "github" username ="pyarya" /> | -->
+        <a href="/contact">
+            <svg class="mailbox-icon" fill="#ffffff" height="128" width="128" id="Capa_1" viewBox="0 0 75.294 75.294">
+                <style>
+                    svg.email-logo path{fill: #ffffff;}
+                    svg.email-logo:hover path{fill: #ffabff}
+                </style>
+                <g>
+                    <path xmlns="http://www.w3.org/2000/svg" d="M7 6H17.2C18.8802 6 19.7202 6 20.362 6.32698C20.9265 6.6146 21.3854 7.07354 21.673 7.63803C22 8.27976 22 9.11984 22 10.8V18H11M7 6C9.20914 6 11 7.79086 11 10V18M7 6C4.79086 6 3 7.79086 3 10V18H11M17 3H14V12M10 18V21H14V18M7 12H7.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>
+        </a>
+
+
+        <!-- <p>
+    <Social platform = "github" username ="pyarya" /> |
     <Social platform = "linkedin" username ="in/aryanaryal" /> |
     <a href="mailto:aryal2@ualberta.ca">email</a>
-    </p>
+    </p> -->
     <ThemeIcon />
     </div>
 </footer>
