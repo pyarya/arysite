@@ -25,7 +25,7 @@ Our basic plan for the game was:
 - Donair rarity
 - selling collected donairs for money
 
-You will find that we were able to expand this idea significantly as the post continues. 
+We covered these basics while also changing them throughout the project's 24 hour development period. Images at the bottom!
 
 ## How we built it:
 
@@ -54,6 +54,15 @@ While everything else went well, we struggled with the implementation of the emb
 This was overall a fantastic experience for our first hackathon. By combining our love for donairs with our coding mediocrity, we were able to create a unique and enjoyable experience for our personal server as well as receive some laughs from the judges for a fun idea. 
 
 I would highly recommend anyone to experiment with creating basic discord bots whether it be a game, for moderation, or just for fun.
+
+### Images
+<div style="display:flex; flex-wrap: wrap;" >
+  <img src="/images/blog/heist.png" style="align-self:center" width="400">
+    <img src="/images/blog/rummage.png" style="align-self:center" width="400">
+  <img src="/images/blog/Roll.png" style="align-self:center" width="400">
+  <img src="/images/blog/stats.png" style="align-self:center" width="400">
+</div>
+
 #### links
 1. [useful project](https://pyarya.pages.dev/projects/project-3)
 2. [virtual fisher](https://virtualfisher.com/)
