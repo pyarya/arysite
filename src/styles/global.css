@@ -99,8 +99,10 @@ html {
 
   footer .footlinks {
     display: flex;
+    flex-direction: unset;
     margin-top: auto;
     justify-content: space-between;
+    align-items: center;
     user-select: none;
   }
 
