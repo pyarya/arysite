@@ -5,7 +5,8 @@ author: aryan
 image:
   url: ""
   alt: ""
-pubDate: 2024-03-26
+pubDate: 2023-11-21
+draft: false
 tags:
   - projects
   - hackathon
@@ -14,7 +15,6 @@ tags:
 # Creating a discord bot in 24 hours
 
 Hacked Beta 2023 was my first ever hackathon. A group of friends and I went into this hackathon without expectations or preparation and it was a fantastic event. Starting in the morning, we needed to make a decision, create a project that would be <a href="/projects/project-2">useful</a> or create something for fun. We chose the latter. Our team embarked on a journey to create a fun and engaging clicker game within Discord, where users can immerse themselves in the world of donairs and embark on heists and competitive adventures to become the top shwarma holder.
-[[project-3]]
 
 ## What it does:
 

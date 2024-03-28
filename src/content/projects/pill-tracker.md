@@ -5,7 +5,7 @@ author: aryan
 image:
   url: ""
   alt: ""
-pubDate: 2024-03-28
+pubDate: 2024-01-22
 tags:
   - fun
   - projects
@@ -14,7 +14,5 @@ tags:
 # Creating a Pill Tracking App in 24 hours
 
 we made a pill tracker (actually useful) hackathon project.
-## header two example
 
-more details and such!
-
+## more details coming soon.

@@ -99,8 +99,10 @@ html {
 
   footer .footlinks {
     display: flex;
+    flex-direction: unset;
     margin-top: auto;
     justify-content: space-between;
+    align-items: center;
     user-select: none;
   }
 
@@ -191,10 +193,17 @@ html {
   justify-content: space-evenly;
 }
 
-p.hi {
+.hi {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: larger;
+  background: none;
+  font-size: 200px;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 /* hamburger menu from https://codepen.io/andreykrokhin/pen/mGEqja */
