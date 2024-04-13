@@ -8,7 +8,7 @@ const PageTitle = 'home';
 
 <BaseLayout PageTitle={PageTitle}>
 	<div class="text">
-		<Greeting client:load messages={["Hello", "Hej", "Hallo", "Hola", "Habari"]} />
+		<span transition:animate="fade"><Greeting client:load messages={["Hello", "Hej", "Hallo", "Hola", "Habari"]} /></span>
 		<h1 class ="name" transition:animate="slide">Aryan Aryal</h1>
 		<p transition:animate="fade">
 		  <span class="word lavender">(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧</span>
