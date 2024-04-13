@@ -51,7 +51,7 @@ p a {
 .light .alt-links a:focus
 .light footer a:hover,
 .light footer a:focus{
-  text-decoration:overline;
+  /* text-decoration:overline; */
   color: var(--purplight);
 }
 
@@ -173,7 +173,7 @@ html {
 .nav-links a:focus,
 .alt-links a:hover,
 .alt-links a:focus{
-  text-decoration:overline;
+  /* text-decoration:overline; */
   color: var(--highlight);
   animation: bounce 0.5s;
   -webkit-transform: scale(1.2);
