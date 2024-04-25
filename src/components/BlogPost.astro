@@ -9,7 +9,7 @@ import { slide } from 'astro:transitions';
     <div class="wrapper">
       <h1>{title}</h1>
       <p>{date}</p>
-      <p>{description}</p>
+      <p1>{description}</p1>
     </div>
   </div>
   </a>
@@ -32,7 +32,7 @@ import { slide } from 'astro:transitions';
 
 .project-card-sm {
 /*   max-width: 600px; */
-  max-width: 500px;
+  max-width: 450px;
   padding: 2.5px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -41,10 +41,11 @@ import { slide } from 'astro:transitions';
   cursor: pointer;
   
   display: flex;
+  flex: 1 1 calc(45% - 1rem);
   justify-content: center;
   align-items: center;
-  margin-top: 0.75rem;
   transition: transform 0.4s, box-shadow 0.4s ;
+  width: 100%;
 }
 
 .project-card-sm:hover {
@@ -107,6 +108,8 @@ import { slide } from 'astro:transitions';
   grid-area: text;
   font-size: 0.9rem;
   line-height: 1.4;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-container .wrapper h1 {
@@ -115,6 +118,11 @@ import { slide } from 'astro:transitions';
   line-height: 1;
   color: #fff;
   margin-bottom: 0.75rem;
+}
+
+.card-container .wrapper p1 {
+  height: 4.2em; /* Adjust the height as needed */
+  overflow: hidden;
 }
 
 .card-container .wrapper button {
@@ -138,6 +146,13 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+@media (max-width: 725px) {
+  .project-card-sm {
+    flex-basis: calc(100% - 1rem); /* Make each card take up 100% width on smaller screens */
+  }
+}
+
 </style>
 
 

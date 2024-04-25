@@ -26,3 +26,19 @@ const PageTitle = "projects";
         </div>
     </body>
 </BaseLayout>
+
+<style>
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    @media (max-width: 725px){
+        .projects-container {
+            justify-content: center;
+        }
+        
+    }
+</style>
