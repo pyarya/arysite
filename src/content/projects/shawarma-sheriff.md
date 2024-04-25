@@ -14,7 +14,7 @@ tags:
 
 # Creating a discord bot in 24 hours
 
-Hacked Beta 2023 was my first ever hackathon. A group of friends and I went into this hackathon without expectations or preparation and it was a fantastic event. Starting in the morning, we needed to make a decision, create a project that would be <a href="/projects/project-2">useful</a> or create something for fun. We chose the latter. Our team embarked on a journey to create a fun and engaging clicker game within Discord, where users can immerse themselves in the world of donairs and embark on heists and competitive adventures to become the top shwarma holder.
+Hacked Beta 2023 was my first ever hackathon. A group of friends and I went into this hackathon without expectations or preparation and it was a fantastic event. Starting in the morning, we needed to make a decision, create a project that would be <a href="/projects/pill-tracker">useful</a> or create something for fun. We chose the latter. Our team embarked on a journey to create a fun and engaging clicker game within Discord, where users can immerse themselves in the world of donairs and embark on heists and competitive adventures to become the top shwarma holder.
 
 ## What it does:
 
@@ -64,7 +64,7 @@ I would highly recommend anyone to experiment with creating basic discord bots w
 </div>
 
 #### links
-1. [useful project](https://pyarya.pages.dev/projects/project-3)
+1. [useful project](https://pyarya.pages.dev/projects/pill-tracker)
 2. [virtual fisher](https://virtualfisher.com/)
 3. [discord.py](https://discordpy.readthedocs.io/en/stable/)
 4. [shwarma sheriff github repo](https://github.com/dumplingggg/hackedbeta)
