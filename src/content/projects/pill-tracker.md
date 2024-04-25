@@ -13,7 +13,7 @@ tags:
 
 
 ## Introduction
-We made a pill tracker as a hackathon project to addresses medication management challenges. Significantly more useful than its predecessor... the [Shawarma Sheriff](/projects/shawarma-sheriff)
+We made a pill tracker as a hackathon (HackED 2024) project to addresses medication management challenges. Significantly more useful than its predecessor... the [Shawarma Sheriff](/projects/shawarma-sheriff)
 
 ## Overview
 The PillPal combines hardware components, including an Arduino and ESP32, connected to an easy-to-use app created through Google AppSheets that allows anyone to track their medication and recieve physical and digital reminders.
@@ -34,10 +34,10 @@ The PillPal combines hardware components, including an Arduino and ESP32, connec
 2. **Data Retrieval**: The ESP32 fetches medication data from the a spreadsheet and the Google Workspace API.
 3. **Data Transmission**: The ESP32 communicates with the Arduino over serial to send medication data.
 4. **Display**: The Arduino displays medication details on the OLED screen, including upcoming medication and dosage information.
-5. **Reminder System**: The buzzer provides audible reminders to users when it's time to take their medication.
+5. **Reminder System**: The buzzer provides audible reminders to users when it's time to take their medication. Additionally, the user is sent an email reminder in case they are not near the physical device.
 
 ## Conclusion
-The PillPal represents a significant step forward in medication management technology. By seamlessly integrating hardware and software components, we created a user-friendly solution that empowers individuals to stay on track with their medication regimen. With further development and refinement, I believe our project has the potential to make a positive impact on the lives of many.
+ By integrating hardware and software components, we created a user-friendly solution that empowers individuals to stay on track with their medication regimen. With further development and refinement, I believe our project has the potential to make a positive impact on the lives of many. Unfortunately, I lost the documented photos for the physical aspect of the project, shown below are screenshots of the app and its functionality.
 
 ### Images
 <div style="display:flex; flex-wrap: wrap;" >
