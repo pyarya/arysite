@@ -5,7 +5,7 @@ author: aryan
 image:
   url: ""
   alt: ""
-pubDate: 2024-01-22
+pubDate: 2024-01-21T12:00:00-07:00
 tags:
   - fun
   - projects

@@ -5,7 +5,7 @@ author: aryan
 image:
   url: ""
   alt: ""
-pubDate: 2023-11-21
+pubDate: 2023-11-20T12:00:00-07:00
 draft: false
 tags:
   - projects

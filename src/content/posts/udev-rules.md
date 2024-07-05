@@ -5,7 +5,7 @@ author: aryan
 image:
   url: ""
   alt: ""
-pubDate: 2024-03-24
+pubDate: 2024-03-23T12:00:00-07:00
 tags:
   - tutorial
   - linux
