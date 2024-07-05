@@ -37,12 +37,13 @@ The PillPal combines hardware components, including an Arduino and ESP32, connec
 5. **Reminder System**: The buzzer provides audible reminders to users when it's time to take their medication. Additionally, the user is sent an email reminder in case they are not near the physical device.
 
 ## Conclusion
- By integrating hardware and software components, we created a user-friendly solution that empowers individuals to stay on track with their medication regimen. With further development and refinement, I believe our project has the potential to make a positive impact on the lives of many. Unfortunately, I lost the documented photos for the physical aspect of the project, shown below are screenshots of the app and its functionality.
+ By integrating hardware and software components, we created a user-friendly solution that empowers individuals to stay on track with their medication regimen. With further development and refinement, I believe our project has the potential to make a positive impact on the lives of many. 
 
 ### Images
 <div style="display:flex; flex-wrap: wrap;" >
+  <img src="/images/blog/pill-tracker/pillpal_hardware.png" style="align-self:center" width="400">
   <img src="/images/blog/pill-tracker/medilist.webp" style="align-self:center" width="400">
     <img src="/images/blog/pill-tracker/tracking.webp" style="align-self:center" width="400">
   <img src="/images/blog/pill-tracker/trackingdetails.webp" style="align-self:center" width="400">
-  <img src="/images/blog/pill-tracker/sidebar.webp" style="align-self:center" width="400">
+
 </div>
