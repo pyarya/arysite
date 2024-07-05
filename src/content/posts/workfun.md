@@ -17,7 +17,7 @@ We spent some time assembling a machine prototype that was brought in from an of
 # July 4 2024 - Structure
 <br>
 <div style="border-radius: 30px; width: 896px; overflow: hidden; filter: drop-shadow(#2d353d 0.5rem 0.5rem 1rem)">
-  <iframe width="896" height="504" src="https://www.youtube.com/embed/uSuscXJOmzM" title="Setup  July 4 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <iframe width="896" height="504" src="https://www.youtube.com/embed/uSuscXJOmzM?rel=0&modestbranding=1" title="Setup July 4 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="false"></iframe>
 </div>
 <br>
 
