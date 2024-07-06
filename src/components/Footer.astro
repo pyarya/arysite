@@ -6,9 +6,9 @@ const today = new Date();
 ---
 
 <footer>
-    <center style="color: #72718a; margin:2%; font-size: small;">© {today.getFullYear()} Aryan Aryal. Licensed under AGPL.</center>
+    <center style="color: #72718a; margin:2%; font-size: small;">©{today.getFullYear()} Aryan Aryal. Licensed under AGPL.</center>
     <div class="footlinks">
-        <p>
+        <p class="icons">
         <a href="/about">
             <svg class="mailbox-icon" fill="#ffffff" height="26px" width="26px" id="Capa_1" viewBox="0 0 24 24">
                 <title>contact</title>
@@ -76,7 +76,6 @@ const today = new Date();
             </svg>
         </a>        
         </p>
-
     <!-- <p>
     <Social platform = "github" username ="pyarya" /> |
     <Social platform = "linkedin" username ="in/aryanaryal" /> |
@@ -118,4 +117,22 @@ const today = new Date();
         font-size: 1rem;
         margin: 0;
     }
+
+    @media screen and (max-width: 725px) {
+
+    .text {
+        position: absolute;
+        justify-self: center;
+        top: 40%;
+        left: 5%;
+    }
+
+    footer .footlinks .icons {
+        display: none;
+    }
+
+    footer .footlinks {
+        justify-content: center;
+    }
+}
 </style>

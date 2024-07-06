@@ -16,11 +16,12 @@ We spent some time assembling a machine prototype that was brought in from an of
 
 # July 4 2024 - Structure
 <br>
-<iframe width="896" height="504" src="https://www.youtube.com/embed/uSuscXJOmzM?rel=0" title="Setup July 4 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"></iframe>
-
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/uSuscXJOmzM?rel=0" title="Setup July 4 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"></iframe>
+</div>
 <br>
 
-# July 7 2024 - Wiring?
+# July 8 2024 - Wiring?
 <br>
 
 <br>

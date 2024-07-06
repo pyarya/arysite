@@ -21,6 +21,8 @@
     "multiformats": "^9.9.0",
     "preact": "^10.20.1",
     "remark": "^15.0.1",
+    "remark-code-title": "^0.2.5",
+    "remark-collapse": "^0.1.2",
     "remark-html": "^16.0.1",
     "tslib": "^2.6.3",
     "typescript": "^5.3.3"

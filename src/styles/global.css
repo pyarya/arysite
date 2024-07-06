@@ -244,8 +244,6 @@ html {
   z-index: 2;
 }
 
-
-
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -286,6 +284,7 @@ html {
 .menu__box {
   display: block;
   position: fixed;
+  text-align: right;
   visibility: hidden;
   top: 0;
   right: -300px; /* Changed from left: -100%; */
@@ -391,7 +390,6 @@ html {
   .hamburger-menu {
     display: none;
   }
-
   
   .name {
     font-weight: bolder;  }
@@ -476,6 +474,17 @@ html {
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+}
+
+@media screen and (max-width: 725px) {
+
+  .text {
+    position: absolute;
+    justify-self: center;
+    top: 30%;
+    left: 5%;
+  }
+  
 }
 
 /*-------changing text on home-------*/
