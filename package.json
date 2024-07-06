@@ -10,12 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/preact": "^3.1.1",
-    "@astrojs/rss": "^4.0.5",
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/mdx": "^3.1.2",
+    "@astrojs/preact": "^3.5.0",
+    "@astrojs/rss": "^4.0.7",
     "@fontsource-variable/source-code-pro": "^5.0.18",
-    "astro": "^4.7.0",
+    "@remark-embedder/core": "^3.0.3",
+    "@remark-embedder/transformer-oembed": "^5.0.0",
+    "astro": "^4.11.5",
+    "multiformats": "^9.9.0",
     "preact": "^10.20.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "tslib": "^2.6.3",
     "typescript": "^5.3.3"
   }
 }

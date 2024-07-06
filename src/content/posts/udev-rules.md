@@ -31,7 +31,7 @@ Now if you plug in your power adapter, you should see some values change. Make s
 ## Step 2. Create a udev rule
 We want to create a file in the `/udev` directory called `onpower.rules`(or whatever you want it to be!). This is where we will define the conditions that need to be met.
 For my example of running a script to control refresh rate I had the following lines in my `onpower.rules` file:
-```udev rules
+```sh
 SUSBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/usr/bin/sudo --user=ary /usr/local/bin/refresh1.sh connected"
 
 SUSBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="/usr/bin/sudo --user=ary /usr/local/bin/refresh1.sh disconnected"
