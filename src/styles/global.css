@@ -14,8 +14,6 @@ background-color: var(--highlight);
 color: #ffffff;
 }
 
-
-
 html.light{
   background-color: var(--bg-colour-light);
   color: var(--bg-colour);
@@ -85,6 +83,8 @@ html {
     margin: 0 0;
     font-size: 4rem;
   }
+
+  /* FOOTER */
 
   footer a, footer p {
     text-decoration: none;

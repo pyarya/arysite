@@ -1,12 +1,12 @@
 ---
 import { fade } from 'astro:transitions';
-import BaseLayout from '../layouts/homelayout.astro';
+import HomeLayout from '../layouts/homelayout.astro';
 import Greeting from '../components/Greeting';
 
 const PageTitle = 'home';
 ---
 
-<BaseLayout PageTitle={PageTitle}>
+<HomeLayout PageTitle={PageTitle}>
 	<div class="text">
 		<span transition:animate="fade"><Greeting client:load messages={["Hello", "Hej", "Hallo", "Hola", "Habari"]} /></span>
 		<h1 class ="name" transition:animate="slide">Aryan Aryal</h1>
@@ -25,4 +25,4 @@ const PageTitle = 'home';
 		 <em style="color:#ffabff66">all views are my own.</em>
 		</p>
 	  </div>
-</BaseLayout>
+</HomeLayout>
