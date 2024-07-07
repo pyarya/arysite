@@ -1,6 +1,5 @@
 ---
 const { title, url, date, description } = Astro.props;
-import { slide } from 'astro:transitions';
 ---
 <div transition:animate="slide" class="project-card-sm">
   <a href={url}>
