@@ -365,6 +365,13 @@ html {
   background-color: rgb(171, 111, 199)
 }
 
+@media screen and (min-width: 833px){
+  .middle {
+    display: flex;
+    padding: 19%
+  }
+}
+
 @media screen and (min-width: 725px) {
 
   .nav-parent {
@@ -381,7 +388,7 @@ html {
   }
   .middle {
     display: flex;
-    padding: 15%
+    padding: 5%
   }
   .nav-links a, .alt-links a{
     display: inline-block;
