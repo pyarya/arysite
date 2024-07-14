@@ -1,0 +1,25 @@
+---
+import { fade } from 'astro:transitions';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const PageTitle = '404';
+---
+
+<BaseLayout>
+	<div class="text" style="top: 20vh;">
+        <p transition:animate="fade">
+            <span class="word lavender">?:3?*:・ﾟ✧</span>
+            <span class="word blue">✧˚ ༘ ⋆｡♡˚</span>
+            <span class="word red">ଘ(੭ˊ꒳​ˋ)੭?</span>
+            <span class="word green">⸜(｡˃ ᵕ ˂ )⸝?</span>
+            <span class="word orange">⸜(*ˊOˋ*)⸝</span>
+          </p>
+          <br>
+          <br>
+		<h1 transition:animate="slide" style="margin= 0 0; font-size= 4rem;">{PageTitle}! Where are you sneaking off to!?</h1>
+		<p transition:animate={fade({duration: '0.2s'})} >
+            Looks like you've stumbled upon a page that doesn't exist (allegedly). Good thing there is a handy dandy navigation bar at the top of the page! Or if youre feeling lazy,
+            here is a link to go <a href="javascript:history.back()">back</a> to the previous page.
+		</p>
+	  </div>
+</BaseLayout>
