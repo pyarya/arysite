@@ -5,12 +5,15 @@ const { frontmatter } = Astro.props;
 import { Code } from 'astro:components';
 import '../styles/markdown.css';
 ---
-<BaseLayout PageTitle = {frontmatter.title}>
+
+<BaseLayout PageTitle={frontmatter.title}>
     <img class="mdpost" src={frontmatter.image.url} alt={frontmatter.image.alt} width="400"/>
     <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
-    <p transition:animate="slide"} ><em>{frontmatter.description}</em></p>
+    <p transition:animate="slide" ><em>{frontmatter.description}</em></p>
     <div class="prose">
         <slot />
+        <span style="color:#f9ebffbb">[user@arysite ~]$</span>
+        <a href="javascript:history.back()">cd ..</a>
+        <hr>
     </div>
 </BaseLayout>
-

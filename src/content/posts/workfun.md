@@ -30,5 +30,3 @@ July 10th we we finished up the wiring with some major issues but everything wor
 <img src="/images/blog/workfun/workfun1.JPG" width="100%">
 
 <img src="/images/blog/workfun/workfun2.jpg" width="100%">
-
----

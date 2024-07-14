@@ -81,5 +81,3 @@ With this, you should have a functioning udev rule that runs a shell script on A
 #### links
 1. [udev on ArchWiki](https://wiki.archlinux.org/title/udev)
 2. [superuser post](https://superuser.com/a/1426287)
-
---
