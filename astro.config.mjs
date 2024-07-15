@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
-
 import html from "remark-html";
 
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,12 +10,12 @@ export default defineConfig({
   integrations: [preact()],
   markdown: {
     extendDefaultPlugins: true,
-    remarkPlugins: [
-      html,
-    ],
+    remarkPlugins: [html],
     shikiConfig: {
       theme: 'dracula',
-      wrap: true,
-    },
+      wrap: true
+    }
   },
+  output: "hybrid",
+  adapter: cloudflare()
 });
