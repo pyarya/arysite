@@ -10,7 +10,7 @@ const sorted = allProjects.sort((a, b) => {
     return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 });
 
-const PageTitle = "⚙️";
+const PageTitle = "⚙️Projects";
 ---
 
 <BaseLayout PageTitle = {PageTitle}>
@@ -39,6 +39,5 @@ const PageTitle = "⚙️";
         .projects-container {
             justify-content: center;
         }
-        
     }
 </style>

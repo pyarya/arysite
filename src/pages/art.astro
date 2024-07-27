@@ -1,17 +1,35 @@
 ---
-import { getCollection } from 'astro:content';
-import ArtLayout from '../layouts/BaseLayout.astro';
-import Gallery from '../components/Gallery.jsx';
-import BlogPost from '../components/BlogPost.astro';
-import { date } from 'astro/zod';
+import ImageGallery from '../components/Gallery.jsx';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-const allProjects = await getCollection("art");
-const PageTitle = "🎨";
+const images = [
+  { src: '../../images/art/IMG_4522.png', description: 'Description for Image 1' },
+  { src: '../../images/art/IMG_4521.DNG', description: 'Description for Image 2' },
+  { src: '../../images/art/IMG_4548.jpg', description: 'Description for Image 1' },
+  { src: '../../images/art/IMG_4551.jpg', description: 'Description for Image 2' },
+  { src: '../../images/art/IMG_4522.png', description: 'Description for Image 1' },
+  { src: '../../images/art/IMG_4521.DNG', description: 'Description for Image 2' },
+  { src: '../../images/art/IMG_4548.jpg', description: 'Description for Image 1' },
+  { src: '../../images/art/IMG_4551.jpg', description: 'Description for Image 2' },
+  { src: '../../images/art/IMG_4522.png', description: 'Description for Image 1' },
+  { src: '../../images/art/IMG_4521.DNG', description: 'Description for Image 2' },
+  { src: '../../images/art/IMG_4548.jpg', description: 'Description for Image 1' },
+  { src: '../../images/art/IMG_4551.jpg', description: 'Description for Image 2' },
+  { src: '../../images/art/IMG_4522.png', description: 'Description for Image 1' },
+  { src: '../../images/art/IMG_4521.DNG', description: 'Description for Image 2' },
+  { src: '../../images/art/IMG_4548.jpg', description: 'Description for Image 1' },
+  { src: '../../images/art/IMG_4551.jpg', description: 'Description for Image 2' },
+];
+
+
+const PageTitle = "🎨Art";
 ---
 
-<ArtLayout PageTitle = {PageTitle}>
+<BaseLayout PageTitle = {PageTitle}>
         <p transition:animate="fade">Here's some of my artwork! You can find anything from physical media to photography here.</p>
-        <Gallery/>
+        <div class="art-grid">
+                <ImageGallery images={images} />
+        </div>
         <!-- <div style="height: 30vh;"></div>
         <marquee> nothing here yet, stay tuned :3</marquee> -->
-</ArtLayout>
+</BaseLayout>

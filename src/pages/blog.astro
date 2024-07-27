@@ -7,7 +7,8 @@ const allPosts = await getCollection("posts");
 const sorted = allPosts.sort((a, b) => {
     return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 });
-const PageTitle = "📢";
+
+const PageTitle = "📢Blog";
 ---
 <BaseLayout PageTitle = {PageTitle}>
         <p transition:animate="fade">My collection of tutorials and anything else I'd like to share. Take a peek!</p>
@@ -20,7 +21,6 @@ const PageTitle = "📢";
                 date={post.data.pubDate.toString().slice(0,15)} 
                 />))}
         </div>
-    </body>
 </BaseLayout>
 
 <style>

@@ -1,8 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { fade } from "astro:transitions";
 const { frontmatter } = Astro.props;
-import { Code } from 'astro:components';
 import '../styles/markdown.css';
 ---
 
@@ -12,13 +10,11 @@ import '../styles/markdown.css';
     <p transition:animate="slide" ><em>{frontmatter.description}</em></p>
     <div class="prose">
         <slot />
-        
         <span >
             <style>
                 .light {
                     color: #72718a;
                 }
-
                 span {
                     color: #72718a;
                 }
