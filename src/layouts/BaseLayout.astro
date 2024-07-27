@@ -10,7 +10,7 @@ import Footer from '../components/Footer.astro';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/images/misc/icon.png" />
+		<link rel="icon" href="{ PageTitle }" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{PageTitle}</title>
@@ -20,6 +20,7 @@ import Footer from '../components/Footer.astro';
 		<Header />
 		<h1 transition:animate="slide">{PageTitle}</h1>
 		<slot />
+		<br>
 		<Footer />
 	</body>
 </html>

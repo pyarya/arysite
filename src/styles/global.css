@@ -4,7 +4,7 @@
   --bg-colour-light: #f5f5f5;
   --bg-colour-light-shade:#ececec;
   --bg-colour: #1c2127;
-  --bg-colour-shade: #2a2d36;
+  --bg-colour-shade: #171a20;
   --highlight: #ffabff;
   --purplight: #9636bf;
 }
@@ -32,6 +32,14 @@ html.light{
 
 p a {
   color: var(--highlight);
+}
+
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #72718a;
+  margin: 1rem 0;
 }
 
 .light footer p,
@@ -121,6 +129,7 @@ html {
 
   footer p.kawaii {
     font-size: 0.95rem;
+    color: #72718a;
   }
 
 
@@ -594,9 +603,9 @@ html {
 
 .project-card-sm {
   max-width: 450px;
-  padding: 2.5px;
+  padding: 1.5px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--bg-colour-shade); 
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -609,9 +618,17 @@ html {
   width: 100%;
 }
 
+.light .project-card-sm {
+  background-color: var(--bg-colour-light);
+}
+
 .project-card-sm:hover {
   transform: scale(1.025);
-  box-shadow: 0 0 40px -20px var(--purplight);  
+  box-shadow: 0 0 30px -25px var(--highlight);  
+}
+
+.light .project-card-sm:hover {
+  box-shadow: 0 0 30px -25px var(--purplight);  
 }
 
 .project-card-sm .card-border-gradient {
@@ -621,7 +638,7 @@ html {
   height: 300%;
   width: 10rem;
   z-index: -1;
-  background: linear-gradient(to right, transparent, #ffffff80, transparent);
+  background: linear-gradient(to right, transparent, var(--highlight), transparent);
   
   transition: opacity 0.3s ;
   opacity: 0;
@@ -631,6 +648,10 @@ html {
 
 .project-card-sm:hover .card-border-gradient {
   opacity: 1;
+}
+
+.light .project-card-sm .card-border-gradient {
+  background: linear-gradient(to right, transparent, var(--purplight), transparent);
 }
 
 @keyframes animate-border-gradient {
@@ -650,8 +671,13 @@ html {
   gap: 1rem;
   padding: 0.75rem;
   border-radius: 12px;
-  background-color: #191e24;
-  color: rgba(255, 255, 255, 0.7);
+  background-color: var(--bg-colour-shade);
+  color: var(--bg-colour-light-shade);
+}
+
+.light .project-card-sm .card-container {
+  background-color: var(--bg-colour-light);
+  color: var(--bg-colour);
 }
 
 .card-container img {
@@ -678,6 +704,10 @@ html {
   line-height: 1;
   color: #fff;
   margin-bottom: 0.75rem;
+}
+
+.light .card-container .wrapper h1 {
+  color: var(--bg-colour);
 }
 
 .card-container .wrapper p1 {

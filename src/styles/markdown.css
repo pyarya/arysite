@@ -121,13 +121,14 @@ h1.markdown-title {
 }
 
 /**** URLs ****/
-.prose a {
-    text-decoration: none;
-    color: #ffabff;
+
+.light .prose a, .light .prose  ol li a {
+    color: #9636bf;
 }
 
-.prose .light a {
-    color: #9636bf;
+.prose a, .prose ol li a {
+    text-decoration: none;
+    color: #ffabff;
 }
 
 .prose a:hover {
