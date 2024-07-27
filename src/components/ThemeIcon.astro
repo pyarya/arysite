@@ -19,9 +19,6 @@
     cursor: pointer;
     transform: rotate(360deg);
   }
-
-
-
 </style>
 
 <script is:inline>
@@ -60,14 +57,11 @@
       themeIndex = (themeIndex + 1) % buttons.length;
       document.querySelector('#themeToggle .kawaii').innerText = buttons[themeIndex];
     }
-
   
     document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
   });
-  </script>
-  
-  <script>
-    document.addEventListener('astro:page-load', () => {
+
+  document.addEventListener('astro:page-load', () => {
     document.addEventListener('astro:after-swap', () => {
       localStorage.theme === 'dark'
       ? document.documentElement.classList.add("dark")

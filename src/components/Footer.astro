@@ -6,15 +6,14 @@ const today = new Date();
 ---
 
 <footer>
-    <center style="color: #72718a; margin:2%; font-size: small;">©{today.getFullYear()} Aryan Aryal. Licensed under AGPL.</center>
     <div class="footlinks">
         <p class="icons">
         <a href="/about">
-            <svg class="mailbox-icon" fill="#ffffff" height="26px" width="26px" id="Capa_1" viewBox="0 0 24 24">
+            <svg class="mailbox-icon" fill="#ffffff" height="24px" width="24px" id="Capa_1" viewBox="0 0 24 24">
                 <title>contact</title>
                 <style>
                     svg.mailbox-icon path{fill: #72718a;}
-                    .light svg.mailbox-icon path{fill: #5a554d;}
+                    .light svg.mailbox-icon path{fill: #1c2127;} 
                     svg.mailbox-icon:hover path{fill: #ffabff}
                     .light svg.mailbox-icon:hover path{fill: #9636bf}
                 </style>
@@ -28,7 +27,7 @@ const today = new Date();
                 <title>linked-in</title>
                 <style>
                     svg.linkedin-logo path{fill: #72718a}
-                    .light svg.linkedin-logo path{fill: #5a554d;}
+                    .light svg.linkedin-logo path{fill: #1c2127;}
                     svg.linkedin-logo:hover path{fill: #ffabff;}
                     .light svg.linkedin-logo:hover path{fill: #9636bf;}
                 </style>
@@ -41,7 +40,7 @@ const today = new Date();
                 <title>github</title>
                 <style>
                     svg.github-logo{fill:#72718a;}
-                    .light svg.github-logo{fill:#5a554d;}
+                    .light svg.github-logo{fill:#1c2127;}
                     svg.github-logo:hover{fill:#ffabff;}
                     .light svg.github-logo:hover{fill:#9636bf;}
                 </style>
@@ -55,7 +54,7 @@ const today = new Date();
                 <title>anilist</title>
                 <style>
                     svg.anilist-logo rect {fill:#72718a;}
-                    .light svg.anilist-logo rect {fill:#5a554d;}
+                    .light svg.anilist-logo rect {fill:#1c2127;}
                     svg.anilist-logo:hover rect {fill:#ffabff;}
                     .light svg.anilist-logo:hover rect {fill:#9636bf;}
                     svg.anilist-logo path {stroke:none; fill-rule:nonzero; fill-opacity:1;}
@@ -76,63 +75,7 @@ const today = new Date();
             </svg>
         </a>        
         </p>
-    <!-- <p>
-    <Social platform = "github" username ="pyarya" /> |
-    <Social platform = "linkedin" username ="in/aryanaryal" /> |
-    <a href="mailto:aryal2@ualberta.ca">email</a>
-    </p> -->
+        <center style="color: #72718a; margin:1.25%; font-size: small;">©{today.getFullYear()} Aryan Aryal. Licensed under AGPL.</center>
     <ThemeIcon />
     </div>
 </footer>
-
-
-<style>
-    footer a, footer p {
-        text-decoration: none;
-        color: #ffffff;
-        user-select: none;
-        display: inline-block;
-        vertical-align: top;
-        margin: 0;
-  }
-    footer {
-        margin-top: auto;
-  }
-
-    footer .footlinks {
-        display: flex;
-        flex-direction: unset;
-        margin-top: auto;
-        justify-content: space-between;
-        align-items: center;
-        user-select: none;
-    }
-
-    footer a:hover, 
-    footer a:focus {
-        color: var(--highlight);
-    }
-
-    footer p.kawaii {
-        font-size: 1rem;
-        margin: 0;
-    }
-
-    @media screen and (max-width: 725px) {
-
-    .text {
-        position: absolute;
-        justify-self: center;
-        top: 40%;
-        left: 5%;
-    }
-
-    footer .footlinks .icons {
-        display: none;
-    }
-
-    footer .footlinks {
-        justify-content: center;
-    }
-}
-</style>
