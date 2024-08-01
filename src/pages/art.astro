@@ -1,5 +1,5 @@
 ---
-import ImageGallery from '../components/Gallery.jsx';
+import ImageGallery from '../components/Gallery.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const images = [
@@ -16,7 +16,8 @@ const PageTitle = "🎨Art";
 <BaseLayout PageTitle = {PageTitle}>
         <p transition:animate="fade">Here's some of my artwork! You can find anything from physical media to photography here.</p>
         <div class="art-grid">
-                <ImageGallery images={images} />
+                <ImageGallery/>
+                <!-- <ImageGallery images={images} /> -->
         </div>
         <!-- <div style="height: 30vh;"></div>
         <marquee> nothing here yet, stay tuned :3</marquee> -->
