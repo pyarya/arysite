@@ -609,7 +609,7 @@ html {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  
+  margin-bottom: 1.5%;
   display: flex;
   flex: 1 1 calc(45% - 1rem);
   justify-content: center;
@@ -739,7 +739,7 @@ a {
 
 @media (max-width: 725px) {
   .project-card-sm {
-    flex-basis: calc(100% - 1rem); /* Make each card take up 100% width on smaller screens */
+    flex-basis: calc(100% - 1rem);
   }
 }
 

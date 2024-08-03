@@ -31,8 +31,20 @@ const projectsCollection = defineCollection({
     })
 });
 
+const albums = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      cover: image(),
+    }),
+});
+
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   posts: postsCollection,
-  projects: projectsCollection
+  projects: projectsCollection,
+  albums,
 };

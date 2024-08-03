@@ -25,8 +25,8 @@ We spent some time assembling a machine prototype that was brought in from an of
 
 July 10th we we finished up the wiring with some major issues but everything worked out in the end. I have below a few photos of the team who built the machine!
 
-<img src="/images/blog/workfun/ee+mece.JPG" width="100%">
+<img src="/src/content/posts/workfun/ee+mece.JPG" width="100%">
 
-<img src="/images/blog/workfun/workfun1.JPG" width="100%">
+<img src="/src/content/posts/workfun/workfun1.JPG" width="100%">
 
-<img src="/images/blog/workfun/workfun2.jpg" width="100%">
+<img src="/src/content/posts/workfun/workfun2.jpg" width="100%">

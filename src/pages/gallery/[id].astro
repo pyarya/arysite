@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { getAlbumImages } from "../../utils/albums";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+    const albums = await getCollection("albums");
+    const paths = Object.values(albums).map((album) => {
+    return {
+      params: {
+        id: album.id,
+      },
+      props: {
+        album,
+      },
+    };
+  });
+
+  return paths;
+}
+
+const { album } = Astro.props;
+const images = await getAlbumImages(album.id);
+---
+
+<BaseLayout PageTitle = {album.data.title}>
+    <p>{album.data.description}</p>
+    <div class="image-grid">
+        {
+            images.map((image) => (
+              <Image
+                src={image}
+                alt={`Image from ${album.data.title} album`}
+                format="avif"
+              />
+            ))
+          }
+    </div>
+    <span >
+        <style>
+            .light {
+                color: #72718a;
+            }
+            span {
+                color: #72718a;
+            }
+        </style>
+    [user@arysite ~]$</span>
+    <a href="javascript:history.back()" style="color: #ffabff;">cd ..</a>
+</BaseLayout>
+
+<style>
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.123image {
+    margin-bottom: 1rem; 
+    border-width: 1px; 
+    border-color: transparent; 
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms; 
+    transition-duration: 300ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+:hover {
+ border-color: #D1D5DB; 
+ }
+
+@media (min-width: 640px) { 
+.image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+ }
+}
+@media (min-width: 768px) { 
+.image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+ }
+}
+@media (min-width: 1024px) { 
+.image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+ }
+}
+</style>

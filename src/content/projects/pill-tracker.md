@@ -32,19 +32,18 @@ The PillPal combines hardware components, including an Arduino and ESP32, connec
 1. **Data Tracking**: Users input their medication details into the Google App Sheets app.
 2. **Data Retrieval**: The ESP32 fetches medication data from the a spreadsheet and the Google Workspace API.
 3. **Data Transmission**: The ESP32 communicates with the Arduino over serial to send medication data.
-4. **Display**: The Arduino displays medication details on the OLED screen, including upcoming medication and dosage information.
-5. **Reminder System**: The buzzer provides audible reminders to users when it's time to take their medication. Additionally, the user is sent an email reminder in case they are not near the physical device.
+4. **Display**: The Arduino displays medication details on the OLED screen, with upcoming medication and dosage information.
+5. **Reminder System**: The buzzer provides audible reminders to users when it's time to take their medication. Also, the user is sent an email reminder in case they are not near the physical device.
 
-## Conclusion
- By integrating hardware and software components, we created a user-friendly solution that empowers individuals to stay on track with their medication regimen. With further development and refinement, I believe our project has the potential to make a positive impact overall. 
+## Wrap-up
+ By integrating hardware and software components, we created a user-friendly solution that helps people stay on track with their medication regimen. Someone should make this a full fledged app, except a lot of older people arent the best with technology. Worst case scenario; we had fun! (slept on the floor of [DICE](https://www.google.com/maps/@53.5280148,-113.5306694,3a,37.5y,72.6h,95.9t/data=!3m7!1e1!3m5!1sdWtAn9SwlzMik_5vcDF_7A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DdWtAn9SwlzMik_5vcDF_7A%26cb_client%3Dmaps_sv.share%26w%3D900%26h%3D600%26yaw%3D72.5960588602471%26pitch%3D-5.901346740917731%26thumbfov%3D90!7i16384!8i8192?coh=205410&entry=ttu))
 
 ### Images
 <div style="display:flex; flex-wrap: wrap;" >
-  <img src="/images/blog/pill-tracker/pillpal_hardware.png" style="align-self:center" width="400">
-  <img src="/images/blog/pill-tracker/medilist.webp" style="align-self:center" width="400">
-    <img src="/images/blog/pill-tracker/tracking.webp" style="align-self:center" width="400">
-  <img src="/images/blog/pill-tracker/trackingdetails.webp" style="align-self:center" width="400">
-
+  <img src="/src/content/projects/pill-tracker/pillpal_hardware.png" style="align-self:center" width="400">
+  <img src="/src/content/projects/pill-tracker/medilist.webp" style="align-self:center" width="400">
+    <img src="/src/content/projects/pill-tracker/tracking.webp" style="align-self:center" width="400">
+  <img src="/src/content/projects/pill-tracker/trackingdetails.webp" style="align-self:center" width="400">
 </div>
 
 #### links
