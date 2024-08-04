@@ -23,10 +23,10 @@ We spent some time assembling a machine prototype that was brought in from an of
 
 # July 10 2024 - Completion Photos
 
-July 10th we we finished up the wiring with some major issues but everything worked out in the end. I have below a few photos of the team who built the machine!
+July 10th we we finished up the wiring with some major issues but we fixed everything in the end! I have below a few photos of the team who built the machine:
 
-<img src="/src/content/posts/workfun/ee+mece.JPG" width="100%">
+<a href="/src/content/posts/workfun/ee+mece.avif"><img src="/src/content/posts/workfun/ee+mece.avif" width="100%"></a>
 
-<img src="/src/content/posts/workfun/workfun1.JPG" width="100%">
+<a href="/src/content/posts/workfun/workfun1.avif"><img src="/src/content/posts/workfun/workfun1.avif" width="100%"></a>
 
-<img src="/src/content/posts/workfun/workfun2.jpg" width="100%">
+<a href="/src/content/posts/workfun/workfun2.avif"><img src="/src/content/posts/workfun/workfun2.avif" width="100%"></a>

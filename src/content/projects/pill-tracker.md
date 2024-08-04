@@ -40,7 +40,7 @@ The PillPal combines hardware components, including an Arduino and ESP32, connec
 
 ### Images
 <div style="display:flex; flex-wrap: wrap;" >
-  <img src="/src/content/projects/pill-tracker/pillpal_hardware.png" style="align-self:center" width="400">
+  <img src="/src/content/projects/pill-tracker/pillpal_hardware.avif" style="align-self:center" width="400">
   <img src="/src/content/projects/pill-tracker/medilist.webp" style="align-self:center" width="400">
     <img src="/src/content/projects/pill-tracker/tracking.webp" style="align-self:center" width="400">
   <img src="/src/content/projects/pill-tracker/trackingdetails.webp" style="align-self:center" width="400">

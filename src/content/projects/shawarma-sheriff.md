@@ -57,10 +57,10 @@ I would highly recommend anyone to experiment with creating basic discord bots w
 
 ### Images
 <div style="display:flex; flex-wrap: wrap;" >
-  <img src="/images/blog/shawarma-sheriff/heist.png" style="align-self:center" width="400">
-    <img src="/images/blog/shawarma-sheriff/rummage.png" style="align-self:center" width="400">
-  <img src="/images/blog/shawarma-sheriff/Roll.png" style="align-self:center" width="400">
-  <img src="/images/blog/shawarma-sheriff/stats.png" style="align-self:center" width="400">
+  <img src="/src/content/projects/shawarma-sheriff/heist.avif" style="align-self:center" width="400">
+    <img src="/src/content/projects/shawarma-sheriff/rummage.avif" style="align-self:center" width="400">
+  <img src="/src/content/projects/shawarma-sheriff/Roll.avif" style="align-self:center" width="400">
+  <img src="/src/content/projects/shawarma-sheriff/stats.avif" style="align-self:center" width="400">
 </div>
 
 #### links
