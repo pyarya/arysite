@@ -14,8 +14,16 @@ export const prerender = false;
     <div class="alt-links">
         <a href="/art" style="visibility: hidden;">art</a> <!-- ## lifehacks -->
         <a href="/about">contact</a>
-        <a class="resume" target="_blank" data-astro-reload>resume</a>
+        <a class="resume" href="" target="_blank" data-astro-reload>resume</a>
     </div>
 </div>
 
-<script src="../scripts/resume.js"></script>    
+<script>
+    document.getElementsByClassName('resume')[0].addEventListener('click', async () => {
+        const url = "https://compile-overleaf.vercel.app/api/read?token=jtfnyyspfxxz";
+        const response = await fetch(url);
+        const jsonResponse = await response.json();
+        const pdfLink = jsonResponse.link.pdf;
+        window.open(pdfLink, "_blank");
+    });    
+</script>    
