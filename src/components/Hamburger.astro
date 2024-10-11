@@ -12,7 +12,7 @@
 			<li><a class="menu__item" href="/blog">blog</a></li>
 			<li><a class="menu__item" href="/art">art</a></li>
 			<li><a class="menu__item" href="/about">contact</a></li>
-      <li><a class="menu__item resume" href="/Aryan Aryal Resume.pdf">resume</a></li>
+      <li><a class="menu__item resume" href="#">resume</a></li>
       <br>
       <br>
       <li class="icons">
@@ -99,14 +99,3 @@
     }
   </style>
 </div>
-
-<script>
-  document.getElementsByClassName('resume')[0].addEventListener('click', async () => {
-      const url = "https://compile-overleaf.vercel.app/api/read?token=jtfnyyspfxxz";
-      const response = await fetch(url);
-      const jsonResponse = await response.json();
-      const pdfLink = jsonResponse.link.pdf;
-      window.open(pdfLink, "_blank");
-  });    
-  </script>    
-  

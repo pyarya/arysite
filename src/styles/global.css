@@ -227,7 +227,7 @@ html {
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
-.resume:hover {
+.alt-links .resume:hover {
   font-weight: bold;
   scale: 1.1;
 }
