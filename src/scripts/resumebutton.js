@@ -1,19 +1,18 @@
-const resumebuttons = document.getElementsByClassName('resume');
-
-for (let i = 0; i < resumebuttons.length; i++) {
-    resumebuttons[i].addEventListener('click', async () => {
+document.addEventListener('click', async (event) => {
+    if (event.target.classList.contains('resume')) {
         const url = "https://compile-overleaf.vercel.app/api/read?token=jtfnyyspfxxz";
+        console.log('clicked button');
         try {
             const response = await fetch(url);
             if (!response.ok) {
-                throw new Error('fetch fail');
+                throw new Error('pdf fetch fail');
             }
             const jsonResponse = await response.json();
             const pdfLink = jsonResponse.link.pdf;
-            window.open(pdfLink, "_blank");
+            window.open(pdfLink);
         } catch (error) {
             console.error('could not fetch pdf from overleaf, opening local', error);
             window.open('/public/Aryan Aryal Resume.pdf', "_blank"); 
         }
-    });
-}
+    }
+});
