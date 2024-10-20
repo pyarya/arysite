@@ -1,3 +1,5 @@
+// This script uses https://github.com/NeverBehave/compile-overleaf to get the updated pdf from overleaf and open it in a new tab.
+
 document.addEventListener('click', async (event) => {
     if (event.target.classList.contains('resume')) {
         const url = "https://compile-overleaf.vercel.app/api/read?token=jtfnyyspfxxz";
