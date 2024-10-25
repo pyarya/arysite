@@ -1,13 +1,12 @@
 ---
-title: Amazon Price History with Apple Shortcuts!
-description: Use the Apple Shortcuts app for optimizing your deal hunting!
-
+title: Amazon Price History with Shortcuts! 
+description: Apple Shortcuts app for optimizing your deal hunting!
 author: aryan
 image:
   url: ""
   alt: ""
 pubDate: 2024-10-24T12:00:00-07:00
-draft: true
+draft: false
 tags:
   - fun
   - projects
@@ -24,15 +23,20 @@ I’ve made shortcuts for automating my summer jobs, making decisions, and even 
 
 If you haven’t been introduced to the shortcuts app, it’s a built in app that comes with your iPhone, iPad and Mac! It’s a fun tool and quite powerful and feature rich for something Apple does not expect most users to utilize. They’ve added a lot of scripting tools and you can even run ssh commands through it! 
 
-The app is mostly known for letting you customize app icons but there’s so many ways you can use it, I’ve even used it to schedule texts before the `send later` feature was added on iOS 18. Check the links at the bottom of this post to see some resources and a link to my Price History one!
+The craze around apple allowing users change their app icons (although I wouldn't call it 'allowing' if you have to do it in such a roundabout way) unfortunately overshadowed the actual uses of the shortcuts app. I've even used it to schedule texts before the `send later` feature was added in iOS 18. Check the links at the bottom of this post to see some resources and a link to my Price History one!
 
 ## The idea
-It really came to fruition from my laziness when shopping. I’m a frequent visitor of [r/bapcsalescanada](https://reddit.com/r/bapcsalescanada) and I was tired of going to a separate website to check the price history for one of the Amazon posts. Desktop users have a handy extension that pulls up the price data easily but I didn’t have anything like that for mobile. Usually when something like that happens, I hit up the trusty shortcuts app. Here’s a screenshot:
+It really came to fruition when I was doing some light sale searching. Maybe some heavy sale searching, I like to shop.
+
+I'm a frequent visitor of [r/bapcsalescanada](https://reddit.com/r/bapcsalescanada) and I was tired of going to a separate website to check the price history for Amazon posts. Desktop users have a [handy extension](https://camelcamelcamel.com/) that pulls up the price data easily but I didn’t have anything like that for mobile. And so, I hit up the trusty shortcuts app. Here’s a screenshot:
 
 <a href="/src/content/projects/shortcuts/homeview.jpeg"><img src="/src/content/projects/shortcuts/homeview.jpeg" width="100%"></a>
 
+## Onto the actual shortcut
+The price history shortcut was something I was expecting to be much more difficult but I was able to put it together as one of my first shortcuts, there’s definitely improvements I can make but it does the job quite effectively. 
+
+![Shortcut Layout](/src/content/projects/shortcuts/homeview.jpeg)
 
 #### links
 1. [r/shortcuts](https://reddit.com/r/shortcuts)
 2. [My Price History Shortcut(iCloud link)](https://www.icloud.com/shortcuts/bc44756f7f5e4bbeb271cbc676c2d019)
-# 
