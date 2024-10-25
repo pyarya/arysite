@@ -6,7 +6,7 @@ image:
   url: ""
   alt: ""
 pubDate: 2024-10-24T12:00:00-07:00
-draft: false
+draft: true
 tags:
   - fun
   - projects
@@ -35,7 +35,6 @@ I'm a frequent visitor of [r/bapcsalescanada](https://reddit.com/r/bapcsalescana
 ## Onto the actual shortcut
 The price history shortcut was something I was expecting to be much more difficult but I was able to put it together as one of my first shortcuts, there’s definitely improvements I can make but it does the job quite effectively. 
 
-![Shortcut Layout](/src/content/projects/shortcuts/homeview.jpeg)
 
 #### links
 1. [r/shortcuts](https://reddit.com/r/shortcuts)
