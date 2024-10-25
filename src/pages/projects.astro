@@ -4,9 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 import { date } from 'astro/zod';
 
-const allProjects = await getCollection("projects");
+const projects = await getCollection("projects");
+const visibleProjects = projects.filter((project) => !project.data.draft);
 
-const sorted = allProjects.sort((a, b) => {
+const sorted = visibleProjects.sort((a, b) => {
     return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 });
 
