@@ -1,6 +1,6 @@
 ---
 title: Shawarma Sheriff Discord Bot! A 24-hour Hackathon Project.
-description: We created a discord bot with leaderboard and point tracking functionality in 24 hours!
+description: Discord bot with leaderboard and point tracking functionality in 24 hours!
 author: aryan
 image:
   url: ""

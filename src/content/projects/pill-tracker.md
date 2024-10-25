@@ -1,6 +1,6 @@
 ---
 title: PillPal. Another 24-hour Hackathon Project.
-description: We created a system that allows individuals to track their medication through an electronic pill box and and app.
+description: Track your medication through an electronic pill box and and app!
 author: aryan
 image:
   url: ""

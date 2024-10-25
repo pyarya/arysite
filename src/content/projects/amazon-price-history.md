@@ -1,12 +1,13 @@
 ---
-title: Amazon Price History with Shortcuts! 
-description: Apple Shortcuts app for optimizing your deal hunting!
+title: Amazon Price History with Apple Shortcuts!
+description: Use the Apple Shortcuts app for optimizing your deal hunting!
+
 author: aryan
 image:
   url: ""
   alt: ""
 pubDate: 2024-10-24T12:00:00-07:00
-draft: false
+draft: true
 tags:
   - fun
   - projects
