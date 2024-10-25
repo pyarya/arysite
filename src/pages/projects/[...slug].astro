@@ -4,7 +4,9 @@ import MDPostLayout from '../../layouts/MDPostLayout.astro';
 
 export async function getStaticPaths() {
   const projEntries = await getCollection('projects');
-  return projEntries.map(entry => ({
+
+  const publishedEntries = projEntries.filter(entry => !entry.data.draft);
+  return publishedEntries.map(entry => ({
     params: { slug: entry.slug }, props: { entry },
   }));
 }
