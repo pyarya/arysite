@@ -40,12 +40,11 @@ The PillPal combines hardware components, including an Arduino and ESP32, connec
  By integrating hardware and software components, we created a user-friendly solution that helps people stay on track with their medication regimen. Someone should make this a full fledged app, except a lot of older people arent the best with technology. Worst case scenario; we had fun! (slept on the floor of [DICE](https://www.google.com/maps/@53.5280148,-113.5306694,3a,37.5y,72.6h,95.9t/data=!3m7!1e1!3m5!1sdWtAn9SwlzMik_5vcDF_7A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DdWtAn9SwlzMik_5vcDF_7A%26cb_client%3Dmaps_sv.share%26w%3D900%26h%3D600%26yaw%3D72.5960588602471%26pitch%3D-5.901346740917731%26thumbfov%3D90!7i16384!8i8192?coh=205410&entry=ttu))
 
 ### Images
-<div style="display:flex; flex-wrap: wrap;" >
-  <img src="/src/content/projects/pill-tracker/pillpal_hardware.avif" style="align-self:center" width="400">
-  <img src="/src/content/projects/pill-tracker/medilist.webp" style="align-self:center" width="400">
-    <img src="/src/content/projects/pill-tracker/tracking.webp" style="align-self:center" width="400">
-  <img src="/src/content/projects/pill-tracker/trackingdetails.webp" style="align-self:center" width="400">
-</div>
+
+![Project Hardware](../../assets/pill-tracker/pillpal_hardware.avif)
+![Medications](../../assets/pill-tracker/medilist.webp)
+![Tracking](../../assets/pill-tracker/tracking.webp)
+![Detailed Tracking](../../assets/pill-tracker/trackingdetails.webp)
 
 #### links
 1. [Sharwarma Sheriff](/projects/shawarma-sheriff)
