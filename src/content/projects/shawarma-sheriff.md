@@ -56,12 +56,10 @@ This was overall a fantastic experience for our first hackathon. By combining ou
 I would highly recommend anyone to experiment with creating basic discord bots whether it be a game, for moderation, or just for fun.
 
 ### Images
-<div style="display:flex; flex-wrap: wrap;" >
-  <img src="/src/content/projects/shawarma-sheriff/heist.avif" style="align-self:center" width="400">
-    <img src="/src/content/projects/shawarma-sheriff/rummage.avif" style="align-self:center" width="400">
-  <img src="/src/content/projects/shawarma-sheriff/Roll.avif" style="align-self:center" width="400">
-  <img src="/src/content/projects/shawarma-sheriff/stats.avif" style="align-self:center" width="400">
-</div>
+![Discord Screenshot Heist](../../assets/shawarma-sheriff/heist.avif)
+![Rummage](../../assets/shawarma-sheriff/rummage.avif)
+![Rolling](../../assets/shawarma-sheriff/Roll.avif)
+![Stats](../../assets/shawarma-sheriff/stats.avif)
 
 #### links
 1. [useful project](https://pyarya.pages.dev/projects/pill-tracker)
