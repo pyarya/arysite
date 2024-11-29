@@ -31,7 +31,7 @@ document.addEventListener('click', async (event) => {
                 window.open(jsonResponse.link.pdf);
             } catch (error) {
                 console.error('overleaf fetch failed, opening local:', error);
-                window.open('/public/Aryan Aryal Resume.pdf', "_blank");
+                window.open('/Aryan Aryal Resume.pdf', "_blank");
             }
         }
     }
