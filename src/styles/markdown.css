@@ -154,6 +154,8 @@ h1.markdown-title {
 /**** Images ****/
 .prose img {
     display: block;
+    width: 100%;
+    height: 100%;
     margin: 30px auto;
     border-radius: 22px;
     filter: drop-shadow(0 4px 6px #444);
