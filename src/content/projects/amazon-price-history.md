@@ -30,7 +30,7 @@ It really came to fruition when I was doing some light sale searching. Maybe som
 
 I'm a frequent visitor of [r/bapcsalescanada](https://reddit.com/r/bapcsalescanada) and I was tired of going to a separate website to check the price history for Amazon posts. Desktop users have a [handy extension](https://camelcamelcamel.com/) that pulls up the price data easily but I didn’t have anything like that for mobile. And so, I hit up the trusty shortcuts app. Here’s a screenshot:
 
-![Shortcuts Homepage](../../assets/shortcuts/homeview.jpeg)
+![Shortcuts Homepage](../../assets/shortcuts/homeview.jpg)
 
 ## Onto the actual shortcut
 The price history shortcut was something I was expecting to be much more difficult but I was able to put it together as one of my first shortcuts, there’s definitely improvements I can make but it does the job quite effectively.
