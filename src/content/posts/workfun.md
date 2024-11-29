@@ -26,8 +26,9 @@ We spent some time assembling a machine prototype that was brought in from an of
 
 July 10th we we finished up the wiring with some major issues but we fixed everything in the end! I have below a few photos of the team who built the machine:
 
-<a href="/src/content/posts/images/workfun/ee+mece.avif"><Image src="/src/content/posts/images/workfun/ee+mece.avif" alt="handsome guys at work" width="100%"></a>
+![Handsome Guys at work](../../assets/workfun/ee+mece.avif)
 
-<a href="/src/content/posts/images/workfun/workfun1.avif"><Image src="/src/content/posts/images/workfun/workfun1.avif" alt="handsome guys sitting after working hard" width="100%"></a>
+![Handsome guys sitting after working hard](../../assets/workfun/workfun1.avif)
 
-<a href="/src/content/posts/images/workfun/workfun2.avif"><Image src="/src/content/posts/images/workfun/workfun2.avif" alt="handsome guys sitting (still) after working hard, again" width="100%"></a>
+![Handsome guys sitting (at work still) after working hard. Again](../../assets/workfun/workfun2.avif)
+
