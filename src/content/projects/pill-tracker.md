@@ -42,8 +42,11 @@ The PillPal combines hardware components, including an Arduino and ESP32, connec
 ### Images
 
 ![Project Hardware](../../assets/pill-tracker/pillpal_hardware.avif)
+
 ![Medications](../../assets/pill-tracker/medilist.webp)
+
 ![Tracking](../../assets/pill-tracker/tracking.webp)
+
 ![Detailed Tracking](../../assets/pill-tracker/trackingdetails.webp)
 
 #### links

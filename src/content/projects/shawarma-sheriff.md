@@ -57,8 +57,11 @@ I would highly recommend anyone to experiment with creating basic discord bots w
 
 ### Images
 ![Discord Screenshot Heist](../../assets/shawarma-sheriff/heist.avif)
+
 ![Rummage](../../assets/shawarma-sheriff/rummage.avif)
+
 ![Rolling](../../assets/shawarma-sheriff/Roll.avif)
+
 ![Stats](../../assets/shawarma-sheriff/stats.avif)
 
 #### links

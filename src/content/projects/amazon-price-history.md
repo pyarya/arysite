@@ -32,8 +32,37 @@ I'm a frequent visitor of [r/bapcsalescanada](https://reddit.com/r/bapcsalescana
 
 ![Shortcuts Homepage](../../assets/shortcuts/homeview.jpg)
 
-## Onto the actual shortcut
-The price history shortcut was something I was expecting to be much more difficult but I was able to put it together as one of my first shortcuts, there’s definitely improvements I can make but it does the job quite effectively.
+## Making the shortcut
+I start with the `Get Item from List` module and set it to *First Item* from *Shortcut Input*. This let's you use the share sheet as a way to get input for the shortcut. You can also start with pressing the ⓘ button at the bottom of the page and enabling *Show in Share Sheet*. In the program flow, at the top should now be a `Receive __ input from Share Sheet` block. You can select the first option and change that to URLs, for "If there's no input:", you can select *Get Clipboard* from the dropdown. 
+
+It should look like this:
+![First Step](../../assets/shortcuts/)
+
+Now you can use `Get URLs from Input` to get the url. At this point, the amazon app usually gives a shortened URL in the form of *https://a.co/d/wxyz123*. We want the complete amazon URL since we will be using *charts.camelcamelcamel.com/* which needs the amazon product code in the url. We can use the `Expand URLs` module for that, which gets us the entire link. 
+
+As an example, if you wanted to get [this](https://a.co/d/4iuR5FE) and check the price history. The share page from the amazon app would get you this link: *https://a.co/d/4iuR5FE*. The `Expand URLs` will get you the entire link(weirdly long but has what we need) which looks like:
+
+```
+https://www.amazon.ca/dp/B0DHLCRF91?ref=cm_sw_r_cp_ud_dp_3HSFY6RVZH0BVW2PD5MS&ref_=cm_sw_r_cp_ud_dp_3HSFY6RVZH0BVW2PD5MS&social_share=cm_sw_r_cp_ud_dp_3HSFY6RVZH0BVW2PD5MS&peakEvent=5&dealEvent=0&skipTwisterOG=1
+```
+
+Now we just need some regex to get the amazon product ID. Which is the string at *amazon.ca/dp/{string here}?*. This works because camelcamelcamel also uses this string to get the right amazon page, and we just want to take their chart. You can use the `Match Text` module for getting the url, make sure the *Case Sensitive* option is toggled on. The regex I used to match this string was `\/dp\/([A-Za-z0-9]+)`. 
+
+Our result looks like this: `/dp/BODHLCRF91`
+
+Once you have the match, we need `Get Group from Matched Text` to access our result. Since the link signifies the product code after */dp/*, we have to make sure to get the group at index **1** to grab the ID only. 
+
+The camelcamelcamel charts work with url parameters like *charts.camelcamelcamel.com/{country}/{productID}/{chart-details}*. So we can control the country, which you will need to do if you're not in canada, since product IDs will vary across countries.
+
+I found that its nice to see the new and used graphs when I want to check a price so I have enabled those as well as the legend. But there are a lot of options you can experiment with. 
+
+We need to add a `Text` block and then insert our variable from the match above.
+```
+https://charts.camelcamelcamel.com/ca/{match result}/amazon-new-used.png?legend=1
+``` 
+![Text Module with Variable](../../assets/shortcuts/)
+
+From there, we use another `Get URLs from Input` to get the URL with our injected product id which gives us the link to the camelcamelcamel chart. 
 
 
 #### links
