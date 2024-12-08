@@ -62,8 +62,28 @@ https://charts.camelcamelcamel.com/ca/{match result}/amazon-new-used.png?legend=
 ``` 
 ![Text Module with Variable](../../assets/shortcuts/)
 
-From there, we use another `Get URLs from Input` to get the URL with our injected product id which gives us the link to the camelcamelcamel chart. 
+From there, we use another `Get URLs from Input` to get the URL with our injected product id which gives us the link to the camelcamelcamel chart. The *input* in this case is the `Text` module above. At this point, the shortcut is essentially complete, all we need to do is `Show Result` and we can test it in action. 
 
+## Results 
+The final structure of the shortcut looks like this:
+![Price History!!!](../../assets/shortcuts/)
+
+There's a lot of room to work with in terms of QoL changes if you're doing this for yourself, like removing third party new/used or even the size of the chart itself. 
+
+Some options I found were:
+   - legend = 1, set this to 0 if you dont want a legend, maybe if you're just showing amazon only?
+   - change the amazon-new-used at the start of the URL to filter between displaying sellers and their price history
+      - amazon.png: for only prices sold by amazon
+      - new.png: for new items but not sold by amazon
+      - used.png: used items.
+   -- You can combine these like we did above(separated with `-`) to show all of them or only the ones you want.
+   - w = <width> : lets you speicify your width. I like 700.
+   - h = <height> : i like 450.
+
+You also need to put these options separated with `&` to apply them:
+```
+https://charts.camelcamelcamel.com/ca/{match result}/amazon-new.png?w=700&h-450&legend=1
+``` 
 
 #### links
 1. [r/shortcuts](https://reddit.com/r/shortcuts)
