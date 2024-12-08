@@ -36,7 +36,7 @@ I'm a frequent visitor of [r/bapcsalescanada](https://reddit.com/r/bapcsalescana
 I start with the `Get Item from List` module and set it to *First Item* from *Shortcut Input*. This let's you use the share sheet as a way to get input for the shortcut. You can also start with pressing the ⓘ button at the bottom of the page and enabling *Show in Share Sheet*. In the program flow, at the top should now be a `Receive __ input from Share Sheet` block. You can select the first option and change that to URLs, for "If there's no input:", you can select *Get Clipboard* from the dropdown. 
 
 It should look like this:
-![First Step](../../assets/shortcuts/)
+![First Step](../../assets/shortcuts/step1.jpg)
 
 ### 2. Expanding URL
 Now you can use `Get URLs from Input` to get the url. At this point, the amazon app usually gives a shortened URL in the form of:
@@ -55,6 +55,8 @@ Our result looks like this: `/dp/BODHLCRF91`
 
 Once you have the match, we need `Get Group from Matched Text` to access our result. Since the link signifies the product code after */dp/*, we have to make sure to get the group at index **1** to grab the ID only. 
 
+![ProductID](../../assets/shortcuts/step3.jpg)
+
 ### 4. Generating the Chart URL
 The camelcamelcamel charts work with url parameters like *charts.camelcamelcamel.com/{country}/{productID}/{chart-details}*. So we can control the country, which you will need to do if you're not in canada, since product IDs will vary across countries.
 
@@ -64,13 +66,13 @@ We need to add a `Text` block and then insert our variable from the match above.
 ```
 https://charts.camelcamelcamel.com/ca/{match result}/amazon-new-used.png?legend=1
 ``` 
-![Text Module with Variable](../../assets/shortcuts/)
-
 From there, we use another `Get URLs from Input` to get the URL with our injected product id which gives us the link to the camelcamelcamel chart. The *input* in this case is the `Text` module above. At this point, the shortcut is essentially complete, all we need to do is `Show Result` and we can test it in action. 
+
+![Chart URL](../../assets/shortcuts/step4.jpg)
 
 ## Results 
 The final structure of the shortcut looks like this:
-![Price History!!!](../../assets/shortcuts/)
+![Price History!!!](../../assets/shortcuts/shortcut-all.jpg)
 
 There's a lot of room to work with in terms of QoL changes if you're doing this for yourself, like removing third party new/used or even the size of the chart itself. 
 
