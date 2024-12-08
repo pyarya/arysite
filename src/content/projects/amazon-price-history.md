@@ -5,8 +5,8 @@ author: aryan
 image:
   url: ""
   alt: ""
-pubDate: 2024-10-24T12:00:00-07:00
-draft: true
+pubDate: 2024-12-8:00:00-07:00
+draft: false
 tags:
   - fun
   - projects
