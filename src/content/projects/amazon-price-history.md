@@ -84,6 +84,8 @@ You can tweak the chart parameters for specific needs:
   - `new.png` → New prices  
   - `used.png` → Used prices  
 - **Size**: Add `w=<width>&h=<height>` for custom dimensions.  
+
+
 You also need to put these options separated with `&` to apply them:
 ```
 https://charts.camelcamelcamel.com/ca/{match result}/amazon-new.png?w=700&h-450&legend=1
