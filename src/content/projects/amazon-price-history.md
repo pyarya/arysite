@@ -1,11 +1,11 @@
 ---
-title: Amazon Price History with Shortcuts! 
+title: Amazon Price Tracking with Shortcuts!
 description: Apple Shortcuts app for optimizing your deal hunting!
 author: aryan
 image:
   url: ""
   alt: ""
-pubDate: 2024-12-8:00:00-07:00
+pubDate: 2024-12-08T12:00:00-07:00
 draft: false
 tags:
   - fun
