@@ -19,8 +19,9 @@ import Footer from '../components/Footer.astro';
 	<body>
 		<Header />
 		<h1 transition:animate="slide">{PageTitle}</h1>
-		<slot />
-		<br>
+		<div class="content-grid">
+			<slot />
+		</div>
 		<Footer />
 		<script src='../scripts/changingtext.js'></script>
 	</body>
