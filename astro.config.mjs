@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
 import html from "remark-html";
-import svelte from '@astrojs/svelte';
 import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
 
