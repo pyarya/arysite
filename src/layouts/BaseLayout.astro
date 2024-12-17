@@ -17,8 +17,7 @@ import Footer from '../components/Footer.astro';
 		<ViewTransitions />
 	</head>
 	<body>
-		<Header />
-		<h1 transition:animate="slide">{PageTitle}</h1>
+		<Header {PageTitle} />
 		<div class="content-grid">
 			<slot />
 		</div>

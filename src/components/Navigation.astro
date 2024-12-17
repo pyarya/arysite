@@ -1,19 +1,19 @@
 ---
-
+const { PageTitle } = Astro.props;
 ---
 
 <div transition:animate="slide" class="nav-parent">
     <div class="nav-links">
         <a href="/blog">blog</a>
         <a href="/projects">projects</a>
-        <a href="/art" style="visibility:hidden">art</a> <!-- ## this one is hidden because the art page is NOT done -->
-
-    </div>
-    <a href="/"><img src="/images/misc/icon.png" alt="logo" class="logo" width="48" height="48"></a>
-    <!-- <div class="middle"></div> -->
-    <div class="alt-links">
-        <a href="/art" style="visibility:hidden">art</a> <!-- ## lifehacks because i am lazy to fix spacing -->
         <a href="/about">contact</a>
         <a class="resume" href="/">resume</a>
+        <a href="/art" style="visibility:hidden">art</a> <!-- ## this one is hidden because the art page is NOT done -->
+    </div>
+    <div>
+    <a href="/"><img src="/images/misc/icon.png" alt="logo" class="logo" width="48" height="48"></a>
+    </div>
+    <div class="page-info">
+        <h1 transition:animate="slide">{PageTitle}</h1>
     </div>
 </div>  

@@ -116,15 +116,18 @@ footer p.kawaii {
 
 .nav-parent {
   background-color: var(--bg-colour-shade);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-rows: minmax(0,1fr);
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-template-rows: repeat(2,minmax(0,1fr));
+  height: 100%;
+  width: 100%;
+  justify-content: start;
+  overflow: hidden;
+  position: relative;
   user-select: none;
-  max-height: 64px;
   border-radius: 18px;
-}
-
-.light .nav-parent {
-  background-color: var(--bg-colour-light);
+  padding: 25px
 }
 
 .nav-links, .alt-links{
