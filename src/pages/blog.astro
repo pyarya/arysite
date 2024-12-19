@@ -11,11 +11,10 @@ const sorted = visiblePosts.sort((a, b) => {
 });
 
 const PageTitle = "Blog";
-const PageDesc = "My collection of tutorials and anything else I'd like to share. Take a peek!"
+const PageDesc = "blogs, tutorials, the usual";
 ---
-<BaseLayout PageTitle = {PageTitle}>
-    <p transition:animate="fade">{PageDesc}</p>
-        <div class="projects-container">
+<BaseLayout PageTitle = {PageTitle} PageDesc = {PageDesc}>
+    <!-- <div class="projects-container"> -->
         {sorted.map((post) => (
             <BlogPost
                 url={`/posts/${post.slug}/`} 
@@ -23,7 +22,6 @@ const PageDesc = "My collection of tutorials and anything else I'd like to share
                 description={post.data.description} 
                 date={post.data.pubDate.toString().slice(0,15)} 
                 />))}
-        </div>
 </BaseLayout>
 
 <style>

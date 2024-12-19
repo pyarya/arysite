@@ -12,11 +12,10 @@ const sorted = visibleProjects.sort((a, b) => {
 });
 
 const PageTitle = "⚙️Projects";
+const PageDesc = "Personal Projects, sometimes labs :p";
 ---
 
-<BaseLayout PageTitle = {PageTitle}>
-        <p transition:animate="fade">Here are some of my projects.</p>
-        <div class="projects-container">
+<BaseLayout PageTitle = {PageTitle} PageDesc = {PageDesc}>
         {sorted.map((project) => (
             <BlogPost 
             url={`/projects/${project.slug}/`} 
@@ -24,7 +23,6 @@ const PageTitle = "⚙️Projects";
             description={project.data.description} 
             date={project.data.pubDate.toString().slice(0,15)}
             />))}
-        </div>
     </body>
 </BaseLayout>
 

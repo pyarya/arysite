@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  /* border-radius: 20px; */
+  gap: 10px;
   margin: 0 auto;
   color: var(--bg-colour-light);
   width: 100%;
@@ -131,26 +131,13 @@ footer p.kawaii {
 }
 
 .page-info {
+  display: flex;
+  grid-column: auto / span 2;
   align-content: flex-start;
   align-items: flex-start;
-  flex-direction: column;
-  gap: 18px;
-  justify-content: flex-start;
-  align-content: flex-end;
-  align-items: flex-end;
   align-self: end;
-  display: flex;
-  flex: none;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  grid-column: auto / span 2;
-  height: min-content;
-  justify-content: space-between;
-  justify-self: center;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .links {
@@ -239,7 +226,6 @@ footer p.kawaii {
   text-decoration: none;
   color: #ffffff;
   user-select: none;
-  margin: 0 20px;
 }
 
 .logo:hover{
@@ -248,9 +234,7 @@ footer p.kawaii {
 }
 
 .nav-links a:hover,
-.nav-links a:focus,
-.alt-links a:hover,
-.alt-links a:focus {
+.nav-links a:focus {
   /* text-decoration:overline; */
   color: var(--highlight);
   animation: bounce 0.5s;
@@ -260,93 +244,93 @@ footer p.kawaii {
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
-.hi {
-  margin: 0;
-  background: none;
-  font-size: 200px;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
+/* Content Grid Styles */
+
+.content-grid {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 8px;
+  grid-auto-rows: minmax(0px, 1fr);
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, minmax(0px, 1fr));
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  transform: perspective(1200px);
+  width: 100%;
 }
 
-@media screen and (min-width: 833px){
-  .middle {
-    display: flex;
-    padding: 19%
-  }
-}
 
 @media screen and (min-width: 725px) {
 
-.middle {
-  display: flex;
-  padding: 5%
-}
-.nav-links a, .alt-links a{
-  display: inline-block;
-  padding: 15px 20px;
-  user-select: none;
-}
+  .middle {
+    display: flex;
+    padding: 5%
+  }
+  .nav-links a{
+    display: inline-block;
+    padding: 15px 20px;
+    user-select: none;
+  }
 
-.name {
-  font-weight: bolder;  }
+  .name {
+    font-weight: bolder;  }
 
 
-.postlink {
-  display: flex;
-  flex-direction: column;
-  max-width: 40rem; 
-  cursor: pointer;
-  gap: 0.5rem; 
-  border-radius: 0.375rem; 
-  border: 2px solid #4a5568; 
-  padding: 3rem; 
-  transition: all 0.3s ease; 
-  margin: 1%;
-  text-decoration: none;
-  color: #fff;
-}
+  .postlink {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem; 
+    cursor: pointer;
+    gap: 0.5rem; 
+    border-radius: 0.375rem; 
+    border: 2px solid #4a5568; 
+    padding: 3rem; 
+    transition: all 0.3s ease; 
+    margin: 1%;
+    text-decoration: none;
+    color: #fff;
+  }
 
-.text {
-  position: absolute;
-  width: 600px;
-  left: 50%;
-  margin-left: -325px;
-  height: 40px;
-  top: 40%;
-  margin-top: -20px;
-}
+  .text {
+    position: absolute;
+    width: 600px;
+    left: 50%;
+    margin-left: -325px;
+    height: 40px;
+    top: 40%;
+    margin-top: -20px;
+  }
 
-.word {
-  position: absolute;
-  opacity: 0;
-  font-size: larger;
-  user-select: none;
-}
+  .word {
+    position: absolute;
+    opacity: 0;
+    font-size: larger;
+    user-select: none;
+  }
 
-.letter {
-  display: inline-block;
-  position: relative;
-  transform: translateZ(25px);
-  transform-origin: 50% 50% 25px;
-}
+  .letter {
+    display: inline-block;
+    position: relative;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+  }
 
-.letter.out {
-  transform: rotateX(90deg);
-  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
+  .letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
 
-.letter.behind {
-  transform: rotateX(-90deg);
-}
+  .letter.behind {
+    transform: rotateX(-90deg);
+  }
 
-.letter.in {
-  transform: rotateX(0deg);
-  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+  .letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
 
 }
 

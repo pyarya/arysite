@@ -16,9 +16,10 @@ const images = [
 
 
 const PageTitle = "🎨Art";
+const PageDesc = "My Art.";
 ---
 
-<BaseLayout PageTitle = {PageTitle}>
+<BaseLayout PageTitle = {PageTitle} PageDesc = {PageDesc}>
         <p transition:animate="fade">Some of the stuff here is going to be broken for a bit while I figure out how to make it look cool :3</p>
             <div class="gallery-grid">
                 {albums.map((item) => (
