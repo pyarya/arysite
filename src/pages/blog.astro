@@ -14,7 +14,6 @@ const PageTitle = "Blog";
 const PageDesc = "blogs, tutorials, the usual";
 ---
 <BaseLayout PageTitle = {PageTitle} PageDesc = {PageDesc}>
-    <!-- <div class="projects-container"> -->
         {sorted.map((post) => (
             <BlogPost
                 url={`/posts/${post.slug}/`} 
