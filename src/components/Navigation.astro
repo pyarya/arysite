@@ -1,19 +1,26 @@
 ---
-const { PageTitle } = Astro.props;
+const { PageTitle, PageDesc } = Astro.props;
 ---
 
 <div transition:animate="slide" class="nav-parent">
-    <div class="nav-links">
-        <a href="/blog">blog</a>
-        <a href="/projects">projects</a>
-        <a href="/about">contact</a>
-        <a class="resume" href="/">resume</a>
-        <a href="/art" style="visibility:hidden">art</a> <!-- ## this one is hidden because the art page is NOT done -->
+    <div class="logo-container">
+    <a href="/"><img src="/images/misc/icon.png" alt="logo" class="logo" width="85" height="85"></a>
     </div>
-    <div>
-    <a href="/"><img src="/images/misc/icon.png" alt="logo" class="logo" width="48" height="48"></a>
+    <div class="links">
+        <div class="nav-links">
+            <div class="page-links">
+                <a href="/blog">blog</a>
+                <a href="/projects">projects</a>
+                <!--            <a href="/art" style="visibility:hidden">art</a> <!-- ## this one is hidden because the art page is NOT done -->
+            </div>
+            <div class="about-links">
+                <a href="/about">contact</a>
+                <a class="resume" href="#">resume</a>
+            </div>
+        </div>
     </div>
     <div class="page-info">
         <h1 transition:animate="slide">{PageTitle}</h1>
+        <p transition:animate="fade">{PageDesc}</p>
     </div>
 </div>  

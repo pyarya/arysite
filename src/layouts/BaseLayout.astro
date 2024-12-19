@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-const { PageTitle } = Astro.props;
+const { PageTitle, PageDesc } = Astro.props;
 import '../styles/global.css';
 import '@fontsource-variable/source-code-pro';
 import Header from '../components/Header.astro';
@@ -13,11 +13,12 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" href="/images/misc/icon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<script src="https://kit.fontawesome.com/8288b4ef27.js" crossorigin="anonymous"></script>
 		<title>{PageTitle}</title>
 		<ViewTransitions />
 	</head>
 	<body>
-		<Header {PageTitle} />
+		<Header {PageTitle} {PageDesc} />
 		<div class="content-grid">
 			<slot />
 		</div>

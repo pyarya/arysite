@@ -10,10 +10,11 @@ const sorted = visiblePosts.sort((a, b) => {
     return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 });
 
-const PageTitle = "📢Blog";
+const PageTitle = "Blog";
+const PageDesc = "My collection of tutorials and anything else I'd like to share. Take a peek!"
 ---
 <BaseLayout PageTitle = {PageTitle}>
-        <p transition:animate="fade">My collection of tutorials and anything else I'd like to share. Take a peek!</p>
+    <p transition:animate="fade">{PageDesc}</p>
         <div class="projects-container">
         {sorted.map((post) => (
             <BlogPost

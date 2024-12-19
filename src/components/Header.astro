@@ -1,11 +1,12 @@
 ---
 import Nav from '../components/Navigation.astro';
 const { PageTitle } = Astro.props;
+const { PageDesc } = Astro.props;
 ---
 
 <nav>
     <header>
-        <Nav {PageTitle} />
+        <Nav {PageTitle} {PageDesc} />
     </header>
 </nav>
 <script src='../scripts/resumebutton.js'></script>
