@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
+import Cards from '../components/Cards.astro';
 import { date } from 'astro/zod';
 
 const projects = await getCollection("projects");
@@ -17,7 +18,7 @@ const PageDesc = "Personal Projects, sometimes labs :p";
 
 <BaseLayout PageTitle = {PageTitle} PageDesc = {PageDesc}>
         {sorted.map((project) => (
-            <BlogPost 
+            <Cards 
             url={`/projects/${project.slug}/`} 
             title={project.data.title} 
             description={project.data.description} 
