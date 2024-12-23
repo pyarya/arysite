@@ -233,7 +233,6 @@ footer p.kawaii {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  /* text-decoration:overline; */
   color: var(--highlight);
   animation: bounce 0.5s;
   -webkit-transform: scale(1.2);
@@ -256,10 +255,34 @@ footer p.kawaii {
   overflow: hidden;
   padding: 0px;
   position: relative;
-  transform: perspective(1200px);
   width: 100%;
 }
 
+.content-card {
+  background-color: var(--bg-colour-shade);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.card-link {
+  display: flex;
+  text-decoration: none;
+  padding-left:12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-link:hover > * {
+  transform: scale(0.95);
+}
+
+.card-link > * {
+  transition: transform 0.3s ease;
+}
 
 @media screen and (min-width: 725px) {
 
