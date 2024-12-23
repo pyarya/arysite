@@ -1,5 +1,5 @@
 ---
-title: PillPal Medication tracker
+title: Medication Tracking // PillPal
 description: Track your medication through an electronic pill box and and app!
 author: aryan
 image:

@@ -1,5 +1,5 @@
 ---
-title: Shawarma Sheriff Discord Bot!
+title: Discord Bot // Shawarma Sheriff
 description: Discord bot with leaderboard and point tracking, a little like cookie-clicker.
 author: aryan
 image:

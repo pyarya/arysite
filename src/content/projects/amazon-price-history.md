@@ -1,5 +1,5 @@
 ---
-title: Amazon Price Tracking with Shortcuts!
+title: 🍎 Shortcuts // Price Tracking
 description: Apple Shortcuts app for optimizing your deal hunting!
 author: aryan
 image:
