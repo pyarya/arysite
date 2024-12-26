@@ -1,27 +1,20 @@
 ---
 import { fade } from 'astro:transitions';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting';
+import Uwu from '../components/uwu.astro';
 
 const PageTitle = 'home';
 ---
 
-<BaseLayout>
-	<div class="text">
+<BaseLayout >
+	<div slot="markdown" class="text">
 		<span transition:animate="fade" style="font-size: 21px;">Hi! I'm</span>
 		<h1 class ="name" transition:animate="slide">Aryan Aryal</h1>
-		<p transition:animate="fade">
-		  <span class="word lavender">(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧</span>
-		  <span class="word blue">✧˚ ༘ ⋆｡♡˚</span>
-		  <span class="word red">ଘ(੭ˊ꒳​ˋ)੭✧</span>
-		  <span class="word green">⸜(｡˃ ᵕ ˂ )⸝♡</span>
-		  <span class="word orange">⸜(*ˊᗜˋ*)⸝</span>
-		</p>
 		<p transition:animate={fade({duration: '0.2s'})} class="desc" >
 		 I am an electrical engineering student with an interest in networks, <a href="https://arvp.org">robotics</a>, and art.
 		 <br>
 		 <br>
 		 <!-- <em style="color: #ffabffCC">all views are my own.</em> -->
 		</p>
-	  </div>
+	</div>
 </BaseLayout>

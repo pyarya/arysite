@@ -19,6 +19,7 @@ import Footer from '../components/Footer.astro';
 	</head>
 	<body>
 		<Header {PageTitle} {PageDesc} />
+		<slot name="markdown" />
 		<div class="content-grid">
 			<slot />
 		</div>

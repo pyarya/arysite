@@ -5,22 +5,15 @@ import '../styles/markdown.css';
 ---
 
 <BaseLayout PageTitle={frontmatter.title}>
-    <img class="mdpost" src={frontmatter.image.url} alt={frontmatter.image.alt} width="400"/>
-    <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
-    <p transition:animate="slide" ><em>{frontmatter.description}</em></p>
-    <div class="prose">
-        <slot />
-        <span >
-            <style>
-                .light {
-                    color: #72718a;
-                }
-                span {
-                    color: #72718a;
-                }
-            </style>
-        [user@arysite ~]$</span>
-        <a href="javascript:history.back()">cd ..</a>
-        <hr>
+    <div style="padding:5px;" slot="markdown">
+        <img class="mdpost" src={frontmatter.image.url} alt={frontmatter.image.alt} width="400"/>
+        <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+        <p transition:animate="slide" ><em>{frontmatter.description}</em></p>
+        <div class="prose">
+            <slot />
+            <span style="color:#72718a;">[user@arysite ~]$</span>
+            <a href="javascript:history.back()">cd ..</a>
+            <hr>
+        </div>
     </div>
 </BaseLayout>

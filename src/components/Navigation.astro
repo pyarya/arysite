@@ -1,4 +1,6 @@
 ---
+import Uwu from './uwu.astro'
+
 const { PageTitle, PageDesc } = Astro.props;
 ---
 
@@ -20,7 +22,11 @@ const { PageTitle, PageDesc } = Astro.props;
         </div>
     </div>
     <div class="page-info">
-        <h1 transition:animate="slide">{PageTitle}</h1>
+        <slot name="uwu"/>
+        <h1 transition:animate="slide">
+            <Uwu />
+            {PageTitle}
+        </h1>
         <p style="margin-bottom: 0;"transition:animate="fade">{PageDesc}</p>
     </div>
 </div>  
