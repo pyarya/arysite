@@ -16,6 +16,7 @@
     "@astrojs/preact": "^4.0.0",
     "@astrojs/react": "^4.1.1",
     "@astrojs/rss": "^4.0.10",
+    "@fontsource-variable/inter": "^5.1.0",
     "@fontsource-variable/source-code-pro": "^5.0.18",
     "@remark-embedder/core": "^3.0.3",
     "@remark-embedder/transformer-oembed": "^5.0.0",

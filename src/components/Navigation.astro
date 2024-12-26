@@ -1,7 +1,7 @@
 ---
 import Uwu from './uwu.astro'
 
-const { PageTitle, PageDesc } = Astro.props;
+const { PageTitle, PageDesc, AboutPageContent } = Astro.props;
 ---
 
 <div transition:animate="slide" class="nav-parent">
@@ -22,9 +22,12 @@ const { PageTitle, PageDesc } = Astro.props;
         </div>
     </div>
     <div class="page-info">
-        <slot name="uwu"/>
+        <div>
+            <p style="width:85%; font-weight:500; font-size:24px;" transition:animate="slide">
+                {AboutPageContent}
+            </p>
+        </div>
         <h1 transition:animate="slide">
-            <Uwu />
             {PageTitle}
         </h1>
         <p style="margin-bottom: 0;"transition:animate="fade">{PageDesc}</p>

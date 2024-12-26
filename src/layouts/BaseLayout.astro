@@ -1,8 +1,8 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-const { PageTitle, PageDesc } = Astro.props;
+const { PageTitle, PageDesc, AboutPageContent } = Astro.props;
 import '../styles/global.css';
-import '@fontsource-variable/source-code-pro';
+import '@fontsource-variable/inter';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -18,8 +18,8 @@ import Footer from '../components/Footer.astro';
 		<ViewTransitions />
 	</head>
 	<body>
-		<Header {PageTitle} {PageDesc} />
-		<slot name="markdown" />
+		<Header {PageTitle} {AboutPageContent} {PageDesc} />
+		<slot name="text" />
 		<div class="content-grid">
 			<slot />
 		</div>
