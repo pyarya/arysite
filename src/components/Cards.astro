@@ -1,9 +1,26 @@
-
 ---
 const { title, url, date, description } = Astro.props;
+
+// Function to generate a random gradient
+function getRandomGradient() {
+  const gradients = [
+    'linear-gradient(45deg, #ff9a9e, #fad0c4)',
+    'linear-gradient(45deg, #a18cd1, #fbc2eb)',
+    'linear-gradient(45deg, #fad0c4, #ffd1ff)',
+    'linear-gradient(45deg, #ffecd2, #fcb69f)',
+    'linear-gradient(45deg, #a1c4fd, #c2e9fb)',
+    'linear-gradient(45deg, #d4fc79, #96e6a1)'
+  ];
+  return gradients[Math.floor(Math.random() * gradients.length)];
+}
+
+const randomGradient = getRandomGradient();
 ---
 <div transition:animate="slide" class="content-card">
   <a class="card-link" style="height: 100%; width: 100%; opacity: 1; border-radius: 18px;" href={url} target="_blank">
+    <div class="card-gradient" style={{ background: randomGradient }}>
+
+    </div>
     <div class="card-text-wrapper">
       <p class="card-title">{title}</p>
       <p class="card-date">{date}</p>
