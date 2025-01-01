@@ -6,7 +6,6 @@ import '../styles/markdown.css';
 
 <BaseLayout PageTitle={frontmatter.title}>
     <div style="padding:5px;" slot="text">
-        <img class="mdpost" src={frontmatter.image.url} alt={frontmatter.image.alt} width="400"/>
         <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
         <p transition:animate="slide" ><em>{frontmatter.description}</em></p>
         <div class="prose">

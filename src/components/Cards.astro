@@ -17,13 +17,13 @@ function getRandomGradient() {
 const randomGradient = getRandomGradient();
 ---
 <div transition:animate="slide" class="content-card">
-  <a class="card-link" style="height: 100%; width: 100%; opacity: 1; border-radius: 18px;" href={url} target="_blank">
+  <a class="card-link" style="height: 100%; width: 100%; opacity: 1; border-radius: 18px;" href={url} >
     <div class="card-gradient" style={{ background: randomGradient }}>
 
     </div>
     <div class="card-text-wrapper">
       <p class="card-title">{title}</p>
-      <p class="card-date">{date}</p>
+      <p class="card-date" style="font-style: italic; opacity: 0.6">{date}</p>
     </div>
   </a>
 </div>
