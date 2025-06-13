@@ -10,5 +10,5 @@ const { piece } = Astro.props;
   data-id={piece.data.id}
   data-date={piece.data.date.toISOString().slice(0,10)}
 >
-  <Image src={piece.data.image} alt={piece.data.alt ?? ''} />
+  <Image src={piece.data.image} format="avif" alt={piece.data.alt ?? ''} />
 </div>
