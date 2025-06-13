@@ -1,5 +1,5 @@
 ---
-id: little guy /# 1
+id: little guy (1)
 date: 2024-06-15
 image: ../albums/photos/lilbro.jpg
 alt: "little bug creature close-up. he is green."
