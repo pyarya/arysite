@@ -33,13 +33,25 @@ const projectsCollection = defineCollection({
     })
 });
 
-const albums = defineCollection({
-  type: "data",
+// const albums = defineCollection({
+//   type: "data",
+//   schema: ({ image }) =>
+//     z.object({
+//       title: z.string(),
+//       description: z.string().optional(),
+//       cover: image(),
+//     }),
+// });
+
+const artwork = defineCollection({
+  type: "content",
   schema: ({ image }) =>
     z.object({
-      title: z.string(),
+      id: z.string(),
+      date: z.date(),
       description: z.string().optional(),
-      cover: image(),
+      image: image(),
+      alt: z.string().optional(),
     }),
 });
 
@@ -48,5 +60,7 @@ const albums = defineCollection({
 export const collections = {
   posts: postsCollection,
   projects: projectsCollection,
-  albums,
+  artwork: artwork,
+  // albums: albums,
+  
 };

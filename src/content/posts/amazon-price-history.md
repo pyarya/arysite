@@ -1,6 +1,6 @@
 ---
 title: Amazon Price Tracking with Shortcuts!
-description: Apple Shortcuts app for optimizing your deal hunting!
+description: Apple Shortcuts for optimizing your deal hunting!
 author: aryan
 image:
   url: ""

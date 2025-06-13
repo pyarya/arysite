@@ -3,7 +3,6 @@ export async function getAlbumImages(albumId: string) {
     let images = import.meta.glob<{ default: ImageMetadata }>(
       "/src/content/albums/**/*.{jpeg,jpg,png,dng}"
     );
-  
 
     images = Object.fromEntries(
       Object.entries(images).filter(([key]) => key.includes(albumId))

@@ -1,44 +1,26 @@
 ---
-import '../styles/gallery.css';
+import '../styles/art-grid.css';
+import '../styles/viewer.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import ArtCard from '../components/ArtCard.astro';
 
-import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
-
-const albums = await getCollection("albums");
-
-const images = [
-  { src: '../../images/art/IMG_4522.png', description: 'Description for Image 1' },
-  { src: '../../images/art/IMG_4521.DNG', description: 'Description for Image 2' },
-  { src: '../../images/art/IMG_4548.jpg', description: 'Description for Image 1' },
-  { src: '../../images/art/IMG_4551.jpg', description: 'Description for Image 2' },
-];
-
-
-const PageTitle = "🎨Art";
+const pieces = await getCollection('artwork');
+const sorted = pieces.sort((a,b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const PageTitle = "🎨Wall";
 ---
 
-<BaseLayout PageTitle = {PageTitle}>
-        <p transition:animate="fade">Some of the stuff here is going to be broken for a bit while I figure out how to make it look cool :3</p>
-            <div class="gallery-grid">
-                {albums.map((item) => (
-                    <a href={`/gallery/${item.id}`} class="gallery-item">
-                        <Image
-                        src={item.data.cover}
-                        alt={item.data.title}
-                        format="avif"
-                        height={400}
-                        width={250}
-                        quality="high"
-                        class="gallery-image"
-                        />
-                        <div class="gallery-info">
-                        <b>{item.data.title}</b>
-                        <p>{item.data.description}</p>
-                        </div>
-                    </a>
-                ))}
-            </div>
-        <!-- <div style="height: 30vh;"></div>
-        <marquee> nothing here yet, stay tuned :3</marquee> -->
-</BaseLayout>
+<BaseLayout PageTitle={PageTitle}>
+    <p transition:animate="fade">my art and photos</p>
+    <div class="art-grid">
+      {sorted.map((piece) => (
+        <ArtCard piece={piece} />
+      ))}
+    </div>
+    <div id="viewer" class="image-viewer">
+      <span class="close">&times;</span>
+      <img id="viewer-img" alt="Full view" />
+      <div id="viewer-meta" class="metadata-box"></div>
+    </div>
+    <script src="../scripts/viewer.js"></script>
+  </BaseLayout>

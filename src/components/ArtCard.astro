@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+const { piece } = Astro.props;
+
+---
+<div
+  class="art-card"
+  transition:animate="slide"
+  data-description={piece.data.description ?? ''}
+  data-id={piece.data.id}
+  data-date={piece.data.date.toISOString().slice(0,10)}
+>
+  <Image src={piece.data.image} alt={piece.data.alt ?? ''} />
+</div>

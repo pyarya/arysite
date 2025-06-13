@@ -65,7 +65,7 @@ I would highly recommend anyone to experiment with creating basic discord bots w
 ![Stats](../../assets/shawarma-sheriff/stats.avif)
 
 #### links
-1. [useful project](https://pyarya.pages.dev/projects/pill-tracker)
+1. [useful project](/posts/pill-tracker)
 2. [virtual fisher](https://virtualfisher.com/)
 3. [discord.py](https://discordpy.readthedocs.io/en/stable/)
 4. [shwarma sheriff github repo](https://github.com/dumplingggg/hackedbeta)

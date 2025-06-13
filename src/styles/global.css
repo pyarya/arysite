@@ -789,3 +789,29 @@ a {
   font-weight: bold;
 }
 
+.resume.loading {
+  pointer-events: none;
+  position: relative;
+  color: var(--highlight);
+}
+
+.resume.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

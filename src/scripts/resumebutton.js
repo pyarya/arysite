@@ -17,21 +17,24 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 document.addEventListener('click', async (event) => {
     if (event.target.classList.contains('resume')) {
-        console.log('clicked button');
-        if (preloadedPdfLink) {
-            window.open(preloadedPdfLink);
-        } else {
-            try {
+        const btn = event.target;
+        btn.classList.add('loading');
+        try {
+            let pdfLink = preloadedPdfLink;
+            if (!pdfLink) {
                 const response = await fetch(url);
                 if (!response.ok) {
                     throw new Error('PDF fetch failed');
                 }
                 const jsonResponse = await response.json();
-                window.open(jsonResponse.link.pdf);
-            } catch (error) {
-                console.error('overleaf fetch failed, opening local:', error);
-                window.open('/Aryan Aryal Resume.pdf', "_blank");
+                pdfLink = jsonResponse.link.pdf;
             }
+        window.open(pdfLink, '_blank');
+        } catch (error) {
+            console.error('overleaf fetch failed, opening local:', error);
+            window.open('/Aryan Aryal Resume.pdf', '_blank');
+        } finally {
+            btn.classList.remove('loading');
         }
     }
 });

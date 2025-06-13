@@ -13,7 +13,7 @@ tags:
 ---
 
 ## Introduction
-We made a pill tracker as a hackathon (HackED 2024) project to addresses medication management challenges. Significantly more useful than its predecessor... the [Shawarma Sheriff](/projects/shawarma-sheriff)
+We made a pill tracker as a hackathon (HackED 2024) project to addresses medication management challenges. Significantly more useful than its predecessor... the [Shawarma Sheriff](/posts/shawarma-sheriff)
 
 ## Overview
 The PillPal combines hardware components, including an Arduino and ESP32, connected to an easy-to-use app created through Google AppSheets that allows anyone to track their medication and recieve physical and digital reminders.
@@ -50,5 +50,5 @@ The PillPal combines hardware components, including an Arduino and ESP32, connec
 ![Detailed Tracking](../../assets/pill-tracker/trackingdetails.webp)
 
 #### links
-1. [Sharwarma Sheriff](/projects/shawarma-sheriff)
+1. [Sharwarma Sheriff](/posts/shawarma-sheriff)
 2. [Google App Sheets](https://about.appsheet.com/home/)
