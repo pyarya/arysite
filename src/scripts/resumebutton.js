@@ -1,8 +1,7 @@
 // This script uses https://github.com/NeverBehave/compile-overleaf to get the updated pdf from overleaf and open it in a new tab.
 let preloadedPdfLink = null;
-
+const url = "https://compile-overleaf.vercel.app/api/read?token=jtfnyyspfxxz";
 window.addEventListener('DOMContentLoaded', async () => {
-    const url = "https://compile-overleaf.vercel.app/api/read?token=jtfnyyspfxxz";
     try {
         const response = await fetch(url);
         if (response.ok) {
