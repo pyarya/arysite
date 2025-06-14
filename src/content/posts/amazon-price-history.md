@@ -7,9 +7,10 @@ image:
   alt: ""
 pubDate: 2024-12-08T12:00:00-07:00
 draft: false
+highlight: true
 tags:
-  - fun
-  - projects
+  - project
+  - tutorial
 ---
 
 ## Introduction

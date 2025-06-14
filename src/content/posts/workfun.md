@@ -8,9 +8,7 @@ image:
 pubDate: 2024-07-10T12:00:00-07:00
 draft: false
 tags:
-  - fun
-  - work
-  - video
+  - misc
 ---
 
 We spent some time assembling a machine prototype that was brought in from an off site location. Below is a time-lapse of the assembly!
