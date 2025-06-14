@@ -45,6 +45,4 @@ const images = defineCollection({
 export const collections = {
   posts: postsCollection,
   media: images,
-  // albums: albums,
-  
 };

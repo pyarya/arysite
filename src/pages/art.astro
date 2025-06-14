@@ -11,7 +11,7 @@ const PageTitle = "🎨Wall";
 ---
 
 <BaseLayout PageTitle={PageTitle}>
-    <p transition:animate="fade">my art and photos</p>
+    <p transition:animate="fade" style="left: 1.5rem;">my art and photos</p>
     <div class="art-grid">
       {sorted.map((piece) => (
         <ArtCard piece={piece} />
@@ -23,4 +23,4 @@ const PageTitle = "🎨Wall";
       <div id="viewer-meta" class="metadata-box"></div>
     </div>
     <script src="../scripts/viewer.js"></script>
-  </BaseLayout>
+</BaseLayout>
