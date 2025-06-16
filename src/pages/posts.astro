@@ -5,7 +5,6 @@ import BlogPost from '../components/BlogPost.astro';
 
 const posts = await getCollection("posts");
 const visiblePosts = posts.filter((post) => !post.data.draft);
-
 const sorted = visiblePosts.sort((a, b) => {
     return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 });
