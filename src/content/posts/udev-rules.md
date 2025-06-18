@@ -1,6 +1,6 @@
 ---
 title: udev rules!
-description: Run-through on how to make things happen using udev rules and bash scripts.
+description: udev rules and bash scripts to automate my refresh rate.
 author: aryan
 image:
   url: ""
@@ -11,6 +11,8 @@ tags:
   - tutorial
   - linux
 ---
+
+Have you ever wanted to automatically have your refresh rate switch to *clean*, **smooth**, 120Hz on wall power but you dont want to use preshipped bloatware garbage ( also you can't because youre on linux ;) ) 
 
 ### pre-reqs and sysinfo:
 Before we get started, this should be replicable on any system using Arch Linux but just in case here is

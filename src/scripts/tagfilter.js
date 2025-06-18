@@ -11,6 +11,15 @@ document.addEventListener('astro:page-load', () => {
     });
   }
 
+  function activateTag(tag) {
+    buttons.forEach(btn => {
+      if (btn.dataset.tag === tag) {
+        active.add(tag);
+        btn.classList.add('active');
+      }
+    });
+  }
+  
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       const tag = btn.dataset.tag;
@@ -24,4 +33,11 @@ document.addEventListener('astro:page-load', () => {
       update();
     });
   });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialTag = urlParams.get('tag');
+  if (initialTag) {
+    activateTag(initialTag);
+  }
+  update();
 });
