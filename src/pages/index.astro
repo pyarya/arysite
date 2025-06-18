@@ -1,27 +1,41 @@
 ---
 import { fade } from 'astro:transitions';
 import HomeLayout from '../layouts/homelayout.astro';
-import Greeting from '../components/Greeting';
 
 const PageTitle = 'home';
 ---
 
 <HomeLayout PageTitle={PageTitle}>
-	<div class="text">
-		<span transition:animate="fade" style="font-size: 21px;">Hi! I'm</span>
-		<h1 class ="name" transition:animate="slide">Aryan Aryal</h1>
-		<p transition:animate="fade">
-		  <span class="word lavender">(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧</span>
-		  <span class="word blue">✧˚ ༘ ⋆｡♡˚</span>
-		  <span class="word red">ଘ(੭ˊ꒳​ˋ)੭✧</span>
-		  <span class="word green">⸜(｡˃ ᵕ ˂ )⸝♡</span>
-		  <span class="word orange">⸜(*ˊᗜˋ*)⸝</span>
-		</p>
-		<p transition:animate={fade({duration: '0.2s'})} class="desc" >
-		 I am an electrical engineering student with an interest in networks, <a href="https://arvp.org">robotics</a>, and art.
-		 <br>
-		 <br>
-		 <!-- <em style="color: #ffabffCC">all views are my own.</em> -->
-		</p>
-	  </div>
+    <section class="intro">
+        <div class="text">
+            <h1 class="name" transition:animate="slide">Aryan Aryal</h1>
+                <p transition:animate="fade" style="padding-bottom: 2.5rem;">
+                  <span class="word lavender">(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧</span>
+                  <span class="word blue">✧˚ ༘ ⋆｡♡˚</span>
+                  <span class="word red">ଘ(੭ˊ꒳​ˋ)੭✧</span>
+                  <span class="word green">⸜(｡˃ ᵕ ˂ )⸝♡</span>
+                  <span class="word orange">⸜(*ˊᗜˋ*)⸝</span>
+                </p>
+                <p transition:animate={fade({duration: '0.2s'})} class="desc" >
+                 Hi!! I'm a 4th year EE student @ the <a href="https://www.ualberta.ca">university of alberta</a>. Thanks for visiting!
+				 Some of my interests include <a href="https://arvp.org">robotics</a>, photography and art
+                 <br>
+                 <br>
+                 <!-- <em style="color: #ffabffCC">all views are my own.</em> -->
+                </p>
+        </div>
+    </section>
 </HomeLayout>
+
+<style>
+	.intro {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: left;
+        }
+
+	.intro .text {
+			width: auto;
+	}
+</style>

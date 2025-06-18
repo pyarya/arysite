@@ -1,7 +1,7 @@
 ---
-const { title, url, date, description } = Astro.props;
+const { title, url, date, description, tags = [] } = Astro.props;
 ---
-<div transition:animate="slide" class="project-card-sm">
+<div transition:animate="slide" class="project-card-sm" data-tags={tags.join(',')}>
   <a href={url}>
   <div class="card-border-gradient"></div>
   <div class="card-container">
@@ -9,7 +9,38 @@ const { title, url, date, description } = Astro.props;
       <h1>{title}</h1>
       <p>{date}</p>
       <p1>{description}</p1>
+      {tags.length > 0 && (
+        <div class="tag-list">
+          {tags.map(tag => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      )}
     </div>
   </div>
   </a>
 </div>
+
+<style>
+  .tag-list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .tag,
+  .tag-filter {
+    border: 1px solid var(--highlight);
+    border-radius: 9999px;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--highlight);
+  }
+
+  .light .tag,
+  .light .tag-filter {
+    border-color: var(--purplight);
+    color: var(--purplight);
+  }
+</style>

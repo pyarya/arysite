@@ -1,13 +1,10 @@
 import { defineConfig } from 'astro/config';
-import preact from '@astrojs/preact';
 import html from "remark-html";
-import cloudflare from "@astrojs/cloudflare";
-import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pyarya.pages.dev',
-  integrations: [preact(), react()],
+  integrations: [],
   markdown: {
     extendDefaultPlugins: true,
     remarkPlugins: [html],

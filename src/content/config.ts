@@ -5,22 +5,7 @@ const postsCollection = defineCollection({
     type: 'content',
     schema: z.object({
       draft: z.boolean(),
-      title: z.string(),
-      pubDate: z.date(),
-      description: z.string(),
-      author: z.string(),
-      image: z.object({
-        url: z.string(),
-        alt: z.string()
-      }),
-      tags: z.array(z.string())
-    })
-});
-
-const projectsCollection = defineCollection({
-    type: 'content',
-    schema: z.object({
-      draft: z.boolean(),
+      highlight: z.boolean().optional(),
       title: z.string(),
       pubDate: z.date(),
       description: z.string(),
@@ -43,7 +28,7 @@ const projectsCollection = defineCollection({
 //     }),
 // });
 
-const artwork = defineCollection({
+const images = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
@@ -59,8 +44,5 @@ const artwork = defineCollection({
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   posts: postsCollection,
-  projects: projectsCollection,
-  artwork: artwork,
-  // albums: albums,
-  
+  media: images,
 };
