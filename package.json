@@ -36,6 +36,7 @@
     "typescript": "^5.5.3"
   },
   "devDependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "wrangler": "^4.22.0"
   }
 }
