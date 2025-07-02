@@ -1,0 +1,21 @@
+.tag-list {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tag,
+.tag-filter {
+  border: 1px solid var(--highlight);
+  border-radius: 9999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.75rem;
+  color: var(--highlight);
+}
+
+.light .tag,
+.light .tag-filter {
+  border-color: var(--purplight);
+  color: var(--purplight);
+}

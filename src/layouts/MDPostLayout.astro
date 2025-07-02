@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 const { frontmatter } = Astro.props;
 import '../styles/markdown.css';
+import '../styles/mdpost.css';
 ---
 
 <BaseLayout PageTitle={frontmatter.title}>
@@ -10,16 +11,7 @@ import '../styles/markdown.css';
     <p transition:animate="slide" ><em>{frontmatter.description}</em></p>
     <div class="prose">
         <slot />
-        <span >
-            <style>
-                .light {
-                    color: #72718a;
-                }
-                span {
-                    color: #72718a;
-                }
-            </style>
-        [user@arysite ~]$</span>
+        <span class="post-prompt">[user@arysite ~]$</span>
         <a href="javascript:history.back()">cd ..</a>
         <hr>
     </div>

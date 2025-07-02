@@ -1,25 +1,10 @@
 ---
+import '../styles/theme-icon.css';
 ---
 <button id="themeToggle">
     <p class="kawaii">ദ്ദി ˉ͈̀꒳ˉ͈́ )✧</p>
   </button>
 
-<style>
-    #themeToggle {
-    border: none;
-    background: none;
-    /* padding: 0.5rem 0 0.5rem 0; */
-  }
-  
-  .kawaii {
-    transition: transform 1s ease;
-  }
-
-  #themeToggle:hover .kawaii {
-    cursor: pointer;
-    transform: rotate(360deg);
-  }
-</style>
 
 <script is:inline>
   document.addEventListener('astro:page-load', () => {
