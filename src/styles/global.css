@@ -602,7 +602,7 @@ html {
   box-sizing: border-box;
 }
 
-.project-card-sm {
+/* .project-card-sm {
   max-width: 450px;
   padding: 1.5px;
   border-radius: 15px;
@@ -653,7 +653,7 @@ html {
 
 .light .project-card-sm .card-border-gradient {
   background: linear-gradient(to right, transparent, var(--purplight), transparent);
-}
+} */
 
 @keyframes animate-border-gradient {
   0% {
@@ -665,7 +665,7 @@ html {
     transform-origin: bottom;
   }
 }
-
+/* 
 .project-card-sm .card-container {
   display: grid;
   grid-template-areas: "img text text text";
@@ -683,7 +683,6 @@ html {
 
 .card-container img {
   grid-area: img;
-/*   height: 100%; */
   aspect-ratio: 1 / 1;
   width: 100%;
   border-radius: 8px;
@@ -712,17 +711,15 @@ html {
 }
 
 .card-container .wrapper p1 {
-  height: 4.2em; /* Adjust the height as needed */
+  height: 4.2em; 
   overflow: hidden;
 }
 
 .card-container .wrapper button {
   background: none;
   border: none;
-  
   font: inherit;
   color: #fff;
-/*   background-color: red; */
   margin-top: 1.4rem;
   
 }
@@ -731,7 +728,7 @@ html {
   margin-left: .5rem;
   transition: margin 0.3s;
 }
-.card-container:hover button i {margin-left: 1rem;}
+.card-container:hover button i {margin-left: 1rem;} */
 
 a {
   text-decoration: none;

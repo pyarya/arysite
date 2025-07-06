@@ -1,23 +1,40 @@
 ---
+<<<<<<< HEAD
 const { title, url, date, description, tags = [] } = Astro.props;
+=======
+import "../styles/posts.css";
+const { title, url, date, description, tags = [], image } = Astro.props;
+>>>>>>> refactor
 ---
-<div transition:animate="slide" class="project-card-sm" data-tags={tags.join(',')}>
+
+<div
+  transition:animate="slide"
+  class="project-card-sm"
+  data-tags={tags.join(",")}
+>
   <a href={url}>
-  <div class="card-border-gradient"></div>
-  <div class="card-container">
-    <div class="wrapper">
-      <h1>{title}</h1>
-      <p>{date}</p>
-      <p1>{description}</p1>
-      {tags.length > 0 && (
-        <div class="tag-list">
-          {tags.map(tag => (
-            <span class="tag">{tag}</span>
-          ))}
-        </div>
-      )}
+    <div class="card-border-gradient"></div>
+    <div class="card-container">
+      {
+        image?.showCard && image.url && (
+          <img src={image.url} alt={image.alt ?? ""} />
+        )
+      }
+      <div class="wrapper">
+        <h1>{title}</h1>
+        <p>{date}</p>
+        <p1>{description}</p1>
+        {
+          tags.length > 0 && (
+            <div class="tag-list">
+              {tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          )
+        }
+      </div>
     </div>
-  </div>
   </a>
 </div>
 

@@ -1,0 +1,137 @@
+.tag-list {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tag,
+.tag-filter {
+  border: 1px solid var(--highlight);
+  border-radius: 9999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.75rem;
+  color: var(--highlight);
+}
+
+.light .tag,
+.light .tag-filter {
+  border-color: var(--purplight);
+  color: var(--purplight);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag-filter {
+  border: 1.5px solid var(--highlight);
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  background: none;
+  color: var(--highlight);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tag-filter.active {
+  background-color: var(--highlight);
+  color: var(--bg-colour);
+}
+
+.light .tag-filter {
+  border-color: var(--purplight);
+  color: var(--purplight);
+}
+
+.light .tag-filter.active {
+  background-color: var(--purplight);
+  color: var(--purplight);
+}
+
+.tag-filter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Grid Styles */
+
+.content-grid {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 8px;
+  grid-auto-rows: minmax(0px, 1fr);
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, minmax(0px, 1fr));
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: .5vh;
+  position: relative;
+  width: 100%;
+}
+
+.content-card {
+  background-color: var(--bg-colour-shade);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 2 / 1;
+  grid-row: auto / span 2;
+  position: relative;
+  transition: background-color 0.8s ease;
+}
+
+.content-card:hover {
+  background-color: rgba(11, 12.9, 15.3, 0.7);
+}
+
+.card-gradient {
+  height: 10%;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px; /* Pill shape */
+  transition: transform 0.3s ease;
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-link:hover > .card-gradient {
+  transform: scale(0.95);
+}
+
+.card-link > * {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 725px) {
+  .projects-container {
+    justify-content: center;
+  }
+}

@@ -1,7 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from '../layouts/BaseLayout.astro';
+<<<<<<< HEAD
 import BlogPost from '../components/BlogPost.astro';
+=======
+// import BlogPost from '../components/BlogPost.astro';
+import Cards from '../components/Cards.astro';
+import '../styles/posts.css';
+>>>>>>> refactor
 
 const posts = await getCollection("posts");
 const visiblePosts = posts.filter((post) => !post.data.draft);
@@ -20,14 +26,15 @@ const PageTitle = "📢Posts";
                 <button class="tag-filter" data-tag={tag}>{tag}</button>
             ))}
         </div>
-        <div class="projects-container">
+        <div class="projects-container content-grid">
         {sorted.map((post) => (
-            <BlogPost
-                url={`/posts/${post.slug}/`} 
-                title={post.data.title} 
-                description={post.data.description} 
-                date={post.data.pubDate.toString().slice(0,15)} 
+            <Cards
+                url={`/posts/${post.slug}/`}
+                title={post.data.title}
+                description={post.data.description}
+                date={post.data.pubDate.toString().slice(0,15)}
                 tags={post.data.tags}
+                image={post.data.image}
                 />))}
         </div>
         <script src="../scripts/tagfilter.js"></script>
