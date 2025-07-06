@@ -70,6 +70,66 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Content Grid Styles */
+
+.content-grid {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 8px;
+  grid-auto-rows: minmax(0px, 1fr);
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, minmax(0px, 1fr));
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: .5vh;
+  position: relative;
+  width: 100%;
+}
+
+.content-card {
+  background-color: var(--bg-colour-shade);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 2 / 1;
+  grid-row: auto / span 2;
+  position: relative;
+  transition: background-color 0.8s ease;
+}
+
+.content-card:hover {
+  background-color: rgba(11, 12.9, 15.3, 0.7);
+}
+
+.card-gradient {
+  height: 10%;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px; /* Pill shape */
+  transition: transform 0.3s ease;
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-link:hover > .card-gradient {
+  transform: scale(0.95);
+}
+
+.card-link > * {
+  transition: transform 0.3s ease;
+}
+
 @media (max-width: 725px) {
   .projects-container {
     justify-content: center;

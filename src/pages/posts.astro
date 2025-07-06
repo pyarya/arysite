@@ -1,7 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
+// import BlogPost from '../components/BlogPost.astro';
+import Cards from '../components/Cards.astro';
 import '../styles/posts.css';
 
 const posts = await getCollection("posts");
@@ -20,9 +21,9 @@ const PageTitle = "📢Posts";
                 <button class="tag-filter" data-tag={tag}>{tag}</button>
             ))}
         </div>
-        <div class="projects-container">
+        <div class="projects-container content-grid">
         {sorted.map((post) => (
-            <BlogPost
+            <Cards
                 url={`/posts/${post.slug}/`}
                 title={post.data.title}
                 description={post.data.description}
