@@ -23,11 +23,12 @@ const PageTitle = "📢Posts";
         <div class="projects-container">
         {sorted.map((post) => (
             <BlogPost
-                url={`/posts/${post.slug}/`} 
-                title={post.data.title} 
-                description={post.data.description} 
-                date={post.data.pubDate.toString().slice(0,15)} 
+                url={`/posts/${post.slug}/`}
+                title={post.data.title}
+                description={post.data.description}
+                date={post.data.pubDate.toString().slice(0,15)}
                 tags={post.data.tags}
+                image={post.data.image}
                 />))}
         </div>
         <script src="../scripts/tagfilter.js"></script>
