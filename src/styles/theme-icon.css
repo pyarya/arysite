@@ -1,0 +1,13 @@
+#themeToggle {
+  border: none;
+  background: none;
+}
+
+.kawaii {
+  transition: transform 1s ease;
+}
+
+#themeToggle:hover .kawaii {
+  cursor: pointer;
+  transform: rotate(360deg);
+}

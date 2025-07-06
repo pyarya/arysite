@@ -1,0 +1,45 @@
+svg.mailbox-icon path {
+  fill: #72718a;
+}
+.light svg.mailbox-icon path {
+  fill: var(--bg-colour);
+}
+svg.mailbox-icon:hover path {
+  fill: var(--highlight);
+}
+.light svg.mailbox-icon:hover path {
+  fill: var(--purplight);
+}
+
+svg.linkedin-logo path {
+  fill: #72718a;
+}
+.light svg.linkedin-logo path {
+  fill: var(--bg-colour);
+}
+svg.linkedin-logo:hover path {
+  fill: var(--highlight);
+}
+.light svg.linkedin-logo:hover path {
+  fill: var(--purplight);
+}
+
+svg.github-logo {
+  fill: #72718a;
+}
+.light svg.github-logo {
+  fill: var(--bg-colour);
+}
+svg.github-logo:hover {
+  fill: var(--highlight);
+}
+.light svg.github-logo:hover {
+  fill: var(--purplight);
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: auto;
+}
