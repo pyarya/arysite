@@ -113,9 +113,9 @@ html {
   }
 
   footer .footlinks {
-    display: flex;
+/*     display: flex; */
     flex-direction: unset;
-    margin-top: auto;
+/*     margin-top: auto; */
     justify-content: space-between;
     padding: 0 5%;
     align-items: center;
