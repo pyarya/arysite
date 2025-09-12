@@ -32,7 +32,7 @@ document.addEventListener('click', async (event) => {
         window.open(pdfLink, '_blank');
         } catch (error) {
             console.error('overleaf fetch failed, opening local:', error);
-            window.open('/Aryan Aryal Resume.pdf', '_blank');
+            window.open('/Aryan_Aryal_Resume.pdf', '_blank');
         } finally {
             btn.classList.remove('loading');
         }
