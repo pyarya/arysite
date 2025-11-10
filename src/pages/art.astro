@@ -4,7 +4,7 @@ import '../styles/viewer.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import ArtCard from '../components/ArtCard.astro';
-
+import { Masonry } from 'astro-masonry';
 const pieces = await getCollection('media');
 const sorted = pieces.sort((a,b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 const PageTitle = "🎨Wall";
@@ -12,11 +12,18 @@ const PageTitle = "🎨Wall";
 
 <BaseLayout PageTitle={PageTitle}>
     <p transition:animate="fade" style="padding-left: 1.5rem;">my art and photos</p>
-    <div class="art-grid">
+    <Masonry
+      breakpointCols={{
+        default:3,
+        1100:2,
+        500:1,
+      }}
+      class="art-grid"
+      >
       {sorted.map((piece) => (
-        <ArtCard piece={piece} />
+          <ArtCard piece={piece} />
       ))}
-    </div>
+    </Masonry>
     <div id="viewer" class="image-viewer">
       <span class="close">&times;</span>
       <img id="viewer-img" alt="Full view" />

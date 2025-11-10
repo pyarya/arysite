@@ -10,50 +10,20 @@ const {
   image = { showCard: false, url: "", alt: "" }
 } = Astro.props;
 
-function getRandomGradient() {
-  const gradients = [
-    'linear-gradient(45deg, #ff9a9e, #fad0c4)',
-    'linear-gradient(45deg, #a18cd1, #fbc2eb)',
-    'linear-gradient(45deg, #fad0c4, #ffd1ff)',
-    'linear-gradient(45deg, #ffecd2, #fcb69f)',
-    'linear-gradient(45deg, #a1c4fd, #c2e9fb)',
-    'linear-gradient(45deg, #d4fc79, #96e6a1)'
-  ];
-  return gradients[Math.floor(Math.random() * gradients.length)];
-}
-
-const randomGradient = getRandomGradient();
 ---
 
 <div
   transition:animate="slide"
   class="project-card-sm content-card"
-  data-tags={tags.join(",")} 
+  data-tags={tags.join(",")}
 >
   <a
     class="card-link"
     href={url}
     style="height:100%;width:100%;opacity:1;border-radius:18px;"
   >
-    <div class="card-gradient" style={{ background: randomGradient }}>
-      {image.showCard && image.url && (
-        <img
-          src={image.url}
-          alt={image.alt ?? title}
-          class="card-image"
-          style="object-fit:cover;width:100%;height:100%;border-radius:18px 18px 0 0;"
-        />
-      )}
-    </div>
     <div class="card-text-wrapper">
       <p class="card-title">{title}</p>
-      <p class="card-date" style="font-style:italic;opacity:0.6">{date}</p>
-      {description && <p class="card-description">{description}</p>}
-      {tags.length > 0 && (
-        <div class="tag-list">
-          {tags.map(tag => <span class="tag">{tag}</span>)}
-        </div>
-      )}
     </div>
   </a>
 </div>

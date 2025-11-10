@@ -3,9 +3,8 @@ title: Amazon Price Tracking with Shortcuts!
 description: Apple Shortcuts for optimizing your deal hunting!
 author: aryan
 image:
-  url: "/images/misc/icon.png"
-  alt: "Website icon"
-  showCard: true
+  url: ""
+  alt: ""
 pubDate: 2024-12-08T12:00:00-07:00
 draft: false
 highlight: true

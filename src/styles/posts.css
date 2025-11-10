@@ -1,3 +1,4 @@
+
 .tag-list {
   margin-top: 0.5rem;
   display: flex;
@@ -62,7 +63,7 @@
 
 .light .tag-filter.active {
   background-color: var(--purplight);
-  color: var(--purplight);
+  color: var(--bg-colour-light-shade);
 }
 
 .tag-filter:hover {
@@ -87,30 +88,25 @@
   width: 100%;
 }
 
+.light .content-card {
+  background-color: var(--bg-colour-light-shade);
+}
+
 .content-card {
   background-color: var(--bg-colour-shade);
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 5 / 1;
   grid-row: auto / span 2;
   position: relative;
   transition: background-color 0.8s ease;
 }
-
+.light .content-card:hover {
+  background-color: rgba(255, 255, 255, 0.7);}
 .content-card:hover {
-  background-color: rgba(11, 12.9, 15.3, 0.7);
-}
+  background-color: rgba(0, 0, 0, 0.4);}
 
-.card-gradient {
-  height: 10%;
-  width: 65%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px; /* Pill shape */
-  transition: transform 0.3s ease;
-}
 
 .card-link {
   display: flex;
