@@ -130,4 +130,9 @@
   .projects-container {
     justify-content: center;
   }
+  .content-grid {
+    grid-auto-rows: minmax(0px, 1fr);
+    grid-template-columns: repeat(1, minmax(50px, 1fr));
+    grid-template-rows: repeat(1, minmax(0px, 1fr));
+  }
 }
