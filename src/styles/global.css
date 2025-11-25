@@ -77,7 +77,8 @@ html {
   }
 
   .page-title {
-  font-family: "MagazineLetter", sans-serif;
+    font-family: "MagazineLetter", sans-serif;
+    text-align: center;
   }
 
   body {

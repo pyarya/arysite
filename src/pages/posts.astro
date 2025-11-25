@@ -16,7 +16,7 @@ const allTags = Array.from(new Set(sorted.flatMap(post => post.data.tags)));
 const PageTitle = "PoStS";
 ---
 <BaseLayout PageTitle = {PageTitle}>
-    <p transition:animate="fade">A collection of some things I've written down, mostly rambling, random projects, and tutorials</p>
+    <p style="text-align: center;" transition:animate="fade">A collection of some things I've written down, mostly rambling, random projects, and tutorials</p>
         <div class="filter-container">
             {allTags.map(tag => (
                 <button class="tag-filter" data-tag={tag}>{tag}</button>
