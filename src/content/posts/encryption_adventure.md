@@ -1,7 +1,7 @@
 ---
 title: encryption adventure!
 description: my notes while on an *attempted* fool's errand
-author: aryan        
+author: aryan
 image:
   url: ""
   alt: ""
@@ -9,8 +9,8 @@ pubDate: 2025-11-09T12:00:00-07:00
 draft: false
 highlight: true
 tags:
-  - project
-  - tutorial
+  - misc
+  - linux
 ---
 # encryption problem
 

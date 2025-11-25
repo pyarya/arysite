@@ -13,10 +13,10 @@ const sorted = visiblePosts.sort((a, b) => {
 });
 
 const allTags = Array.from(new Set(sorted.flatMap(post => post.data.tags)));
-const PageTitle = "📢Posts";
+const PageTitle = "PoStS";
 ---
 <BaseLayout PageTitle = {PageTitle}>
-        <p transition:animate="fade">Stuff I wanted to share, you can find my projects, rambling, and tutorials here.</p>
+    <p transition:animate="fade">A collection of some things I've written down, mostly rambling, random projects, and tutorials</p>
         <div class="filter-container">
             {allTags.map(tag => (
                 <button class="tag-filter" data-tag={tag}>{tag}</button>
@@ -37,7 +37,7 @@ const PageTitle = "📢Posts";
 </BaseLayout>
 
 <style>
-   
+
     @media (max-width: 725px){
         .projects-container {
             justify-content: center;

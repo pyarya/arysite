@@ -1,10 +1,33 @@
 ---
 import { ClientRouter } from 'astro:transitions';
-const { PageTitle } = Astro.props;
 import '../styles/global.css';
 import '@fontsource-variable/source-code-pro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+
+const { PageTitle, FancyTitle } = Astro.props;
+const COLORS = [
+"#eb475d",
+"hsl(46 80% 60%)",
+"hsl(280 80% 60%)",
+"hsl(234 80% 60%)",
+"hsl(12 80% 60%)",
+"hsl(207 80% 60%)",
+"hsl(159, 43%, 59%)"
+];
+
+function randomColor() {
+  return COLORS[Math.floor(Math.random() * COLORS.length)];
+}
+
+function colorizeLetters(text) {
+  return text.split("").map((char) => {
+    if (char === " ") return "<span style='margin-right:0.25em'></span>";
+    return `<span style="color:${randomColor()}">${char}</span>`;
+  }).join("");
+}
+const colorfulTitle = FancyTitle ? colorizeLetters(PageTitle) : PageTitle;
 ---
 
 <html lang="en">
@@ -18,7 +41,11 @@ import Footer from '../components/Footer.astro';
 	</head>
 	<body>
 		<Header />
-		<h1 transition:animate="slide">{PageTitle}</h1>
+		<h1
+		  transition:animate="slide"
+		  class="page-title"
+		  set:html={colorfulTitle}
+		/>
 		<slot />
 		<br>
 		<Footer />

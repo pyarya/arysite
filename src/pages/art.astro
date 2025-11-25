@@ -7,10 +7,12 @@ import ArtCard from '../components/ArtCard.astro';
 import { Masonry } from 'astro-masonry';
 const pieces = await getCollection('media');
 const sorted = pieces.sort((a,b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-const PageTitle = "🎨Wall";
+
+const PageTitle = "art!";
+
 ---
 
-<BaseLayout PageTitle={PageTitle}>
+<BaseLayout PageTitle={PageTitle} FancyTitle={true} >
     <p transition:animate="fade" style="padding-left: 1.5rem;">my art and photos</p>
     <Masonry
       breakpointCols={{

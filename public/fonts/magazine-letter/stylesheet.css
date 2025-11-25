@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Magazine Letter By Brntlbrnl';
+    src: url('MagazineLetterByBrntlbrnl-Rg.woff2') format('woff2'),
+        url('MagazineLetterByBrntlbrnl-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
+@font-face {
+  font-family: "MagazineLetter";
+  src: url("/fonts/magazine-letter/magazine.woff2") format("woff2"),
+       url("/fonts/magazine-letter/magazine.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bg-colour-light: #f5f5f5;
   --bg-colour-light-shade:#ececec;
@@ -47,7 +55,7 @@ hr {
   color: var(--bg-colour);
 }
 
-.light .nav-links a, 
+.light .nav-links a,
 .light .alt-links a {
   color: var(--bg-colour);
 }
@@ -62,13 +70,16 @@ hr {
   color: var(--purplight);
 }
 
-
 html {
     background-color: var(--bg-colour);
     font-family: serif;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
   }
-  
+
+  .page-title {
+  font-family: "MagazineLetter", sans-serif;
+  }
+
   body {
     /* border-radius: 20px; */
     margin: 0 auto;
@@ -82,7 +93,7 @@ html {
     min-height: 100vh;
     font-family: 'Source Code Pro Variable', monospace;
   }
-  
+
   * {
     box-sizing: border-box;
   }
@@ -107,7 +118,7 @@ html {
     border-radius: 18px;
     background-color: var(--bg-colour-shade);
   }
-  
+
   .light footer {
     background-color: var(--bg-colour-light);
   }
@@ -122,7 +133,7 @@ html {
     user-select: none;
   }
 
-  footer a:hover, 
+  footer a:hover,
   footer a:focus {
     color: var(--highlight);
   }
@@ -279,7 +290,7 @@ html {
   align-items: center;
   position: fixed;
   top: 48px;
-  right: 40px; 
+  right: 40px;
 
   width: 26px;
   height: 26px;
@@ -436,21 +447,18 @@ html {
   .hamburger-menu {
     display: none;
   }
-  
-  .name {
-    font-weight: bolder;  }
 
 
   .postlink {
     display: flex;
     flex-direction: column;
-    max-width: 40rem; 
+    max-width: 40rem;
     cursor: pointer;
-    gap: 0.5rem; 
-    border-radius: 0.375rem; 
-    border: 2px solid #4a5568; 
-    padding: 3rem; 
-    transition: all 0.3s ease; 
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    border: 2px solid #4a5568;
+    padding: 3rem;
+    transition: all 0.3s ease;
     margin: 1%;
     text-decoration: none;
     color: #fff;
@@ -459,29 +467,29 @@ html {
   .light .postlink {
     display: flex;
     flex-direction: column;
-    max-width: 40rem; 
+    max-width: 40rem;
     cursor: pointer;
-    gap: 0.5rem; 
-    border-radius: 0.375rem; 
-    border: 2px solid #928c73; 
-    padding: 3rem; 
-    transition: all 0.3s ease; 
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    border: 2px solid #928c73;
+    padding: 3rem;
+    transition: all 0.3s ease;
     margin: 1%;
     text-decoration: none;
     color: #fff;
   }
 
-  
+
   .light .inside-post {
-    color: #8e5cb6; 
-    
+    color: #8e5cb6;
+
   }
 
   .light .postlink:hover {
-    border-color: #8540d3a9; 
+    border-color: #8540d3a9;
     font-weight: bold;
   }
-  
+
 .text {
   position: absolute;
   width: 600px;
@@ -530,7 +538,7 @@ html {
     top: 30%;
     left: 5%;
   }
-  
+
 }
 
 /*-------changing text on home-------*/
@@ -583,7 +591,8 @@ html {
 
 .desc {
   max-width: 45rem;
-  margin: 0rem 2rem 0rem 0rem;
+  margin: 1rem 2rem 0rem 0rem;
+  font-size: 1.15rem;
 }
 
 .desc a{
@@ -606,7 +615,7 @@ html {
   max-width: 450px;
   padding: 1.5px;
   border-radius: 15px;
-  background-color: var(--bg-colour-shade); 
+  background-color: var(--bg-colour-shade);
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -625,11 +634,11 @@ html {
 
 .project-card-sm:hover {
   transform: scale(1.025);
-  box-shadow: 0 0 30px -25px var(--highlight);  
+  box-shadow: 0 0 30px -25px var(--highlight);
 }
 
 .light .project-card-sm:hover {
-  box-shadow: 0 0 30px -25px var(--purplight);  
+  box-shadow: 0 0 30px -25px var(--purplight);
 }
 
 .project-card-sm .card-border-gradient {
@@ -640,10 +649,10 @@ html {
   width: 10rem;
   z-index: -1;
   background: linear-gradient(to right, transparent, var(--highlight), transparent);
-  
+
   transition: opacity 0.3s ;
   opacity: 0;
-    
+
   animation: animate-border-gradient 5s infinite linear;
 }
 
@@ -665,7 +674,7 @@ html {
     transform-origin: bottom;
   }
 }
-/* 
+/*
 .project-card-sm .card-container {
   display: grid;
   grid-template-areas: "img text text text";
@@ -686,7 +695,7 @@ html {
   aspect-ratio: 1 / 1;
   width: 100%;
   border-radius: 8px;
-  
+
   transition: transform 0.3s;
 }
 
@@ -711,7 +720,7 @@ html {
 }
 
 .card-container .wrapper p1 {
-  height: 4.2em; 
+  height: 4.2em;
   overflow: hidden;
 }
 
@@ -721,7 +730,7 @@ html {
   font: inherit;
   color: #fff;
   margin-top: 1.4rem;
-  
+
 }
 
 .card-container .wrapper button i {
@@ -745,13 +754,13 @@ a {
 .postlink {
   display: flex;
   flex-direction: column;
-  max-width: 40rem; 
+  max-width: 40rem;
   cursor: pointer;
-  gap: 0.5rem; 
-  border-radius: 0.375rem; 
-  border: 2px solid #4a5568; 
-  padding: 1.5rem; 
-  transition: all 0.3s ease; 
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  border: 2px solid #4a5568;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
   margin: 1%;
   text-decoration: none;
   color: #fff;
@@ -764,13 +773,13 @@ a {
 .light .postlink {
   display: flex;
   flex-direction: column;
-  max-width: 40rem; 
+  max-width: 40rem;
   cursor: pointer;
-  gap: 0.5rem; 
-  border-radius: 0.375rem; 
-  border: 2px solid #928c73; 
-  padding: 1.5rem; 
-  transition: all 0.3s ease; 
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  border: 2px solid #928c73;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
   margin: 1%;
   text-decoration: none;
   color: #ffabff;
@@ -778,12 +787,12 @@ a {
 
 
 .light .inside-post {
-  color: #000000; 
-  
+  color: #000000;
+
 }
 
 .light .postlink:hover {
-  border-color: #8540d3a9; 
+  border-color: #8540d3a9;
   font-weight: bold;
 }
 

@@ -5,6 +5,11 @@
   text-align: left;
 }
 
+h1 .name {
+  font-weight: bolder;
+  font-size: 72px;
+}
+
 .intro .text {
   width: auto;
 }

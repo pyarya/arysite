@@ -6,7 +6,7 @@ image:
   url: ""
   alt: ""
 pubDate: 2024-03-23T12:00:00-07:00
-draft: false 
+draft: false
 tags:
   - tutorial
   - linux
@@ -26,8 +26,8 @@ First we start off in a terminal to find out what the computer sees when we plug
 We can use the command:
 ```bash
 sudo udevadm monitor --environment
-``` 
-Now if you plug in your power adapter, you should see some values change. Make sure to look at the **non-kernel values** as those are what udev looks at. 
+```
+Now if you plug in your power adapter, you should see some values change. Make sure to look at the **non-kernel values** as those are what udev looks at.
 
 ## Step 2. Create a udev rule
 We want to create a file in the `/udev` directory called `onpower.rules`(or whatever you want it to be!). This is where we will define the conditions that need to be met.
@@ -52,7 +52,7 @@ whenever my power supply is plugged in. When we were figuring this out, I was ha
 export SWAYSOCK="/run/user/1000/$(/bin/ls /run/user/1000 | grep sway)"
 export DISPLAY=:0
 
-case $1 in 
+case $1 in
     "connected")
     echo "connected :) @ $(date)" > /dev/shm/acstatus # write to a file letting us know if its connected for debugging.
     /usr/bin/swaymsg output eDP-1 mode 3072x1920@120.002Hz &>> /dev/shm/acstatus
