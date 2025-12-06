@@ -494,8 +494,8 @@ html {
 .text {
   position: absolute;
   width: 600px;
-  left: 50%;
-  margin-left: -325px;
+  /* left: 50%;
+  margin-left: -325px; */
   height: 40px;
   top: 40%;
   margin-top: -20px;
